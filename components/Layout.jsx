@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-export default function Navbar({ children }) {
+export default function Layout({ children }) {
   const [transparent, settransparent] = useState(true);
   const handleScroll = () => {
     if (window.scrollY >= 200) settransparent(false);
@@ -9,7 +9,7 @@ export default function Navbar({ children }) {
   };
   window.addEventListener("scroll", handleScroll);
   return (
-    <div className="bg-white min-h-screen flex flex-col relative">
+    <div className="bg-white min-h-screen flex flex-col relative font-sans">
       <nav
         className={`navbar ${
           transparent ? "bg-transparent text-white" : "bg-white text-black"

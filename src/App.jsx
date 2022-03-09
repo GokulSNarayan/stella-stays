@@ -1,19 +1,21 @@
 import { useState } from "react";
 import "./App.css";
 import Hero from "../components/Hero";
-import Navbar from "../components/Navbar";
+import Layout from "../components/Layout";
 import Explore from "../components/Explore";
 import Showcase from "../components/Showcase";
+import Footer from "../components/Footer";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <Navbar>
+    <Layout>
       <Hero />
       <Explore />
       <Showcase />
-    </Navbar>
+      <Footer />
+    </Layout>
   );
 }
 
