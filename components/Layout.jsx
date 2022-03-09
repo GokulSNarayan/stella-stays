@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 export default function Layout({ children }) {
   const [transparent, settransparent] = useState(true);
   const handleScroll = () => {
-    if (window.scrollY >= 200) settransparent(false);
+    if (window.scrollY >= 300) settransparent(false);
     else settransparent(true);
   };
   window.addEventListener("scroll", handleScroll);

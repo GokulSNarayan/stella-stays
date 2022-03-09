@@ -54,21 +54,28 @@ export default function Footer() {
             <p className="mr-4">Privacy Policy</p>
           </div>
           <div className="flex ">
-            <img
-              className="h-6 w-6 mr-2"
-              src="/images/linkedin-brands.svg"
-              alt="linkedin"
-            />
-            <img
-              className="h-6 w-6 mr-2"
-              src="/images/facebook-f-brands.svg"
-              alt="linkedin"
-            />
-            <img
-              className="h-6 w-6 mr-2"
-              src="/images/instagram-brands.svg"
-              alt="linkedin"
-            />
+            <a href="#">
+              <img
+                className="h-6 w-6 mr-2"
+                src="/images/linkedin-brands.svg"
+                alt="linkedin"
+              />
+            </a>
+            <a href="#">
+              <img
+                className="h-6 w-6 mr-2"
+                src="/images/facebook-f-brands.svg"
+                alt="linkedin"
+              />
+            </a>
+            <a href="#">
+              {" "}
+              <img
+                className="h-6 w-6 mr-2"
+                src="/images/instagram-brands.svg"
+                alt="linkedin"
+              />
+            </a>
           </div>
         </div>
       </div>

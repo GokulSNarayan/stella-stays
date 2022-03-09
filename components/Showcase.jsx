@@ -1,8 +1,16 @@
+import Slider from "./Slider";
+
+const sliderImages = [
+  "/mobileImages/image1.jpg",
+  "/mobileImages/image2.jpg",
+  "/mobileImages/image3.jpg",
+  "/mobileImages/image4.jpg",
+];
 export default function Showcase() {
   return (
     <section className="flex items-start justify-center px-auto my-5 bg-[#F6F8F9] border border-[#D9E5E9]">
       {/* left col */}
-      <div className="my-6">
+      <div className="my-6 w-3/6">
         <div className="py-4">
           <h1 className="text-2xl mb-2">
             Hassle free end-to-end digital experience{" "}
@@ -90,11 +98,13 @@ export default function Showcase() {
         </div>
       </div>
       {/* right col */}
-      <div className="flex justify-center">
-        <img
-          className="h-[45rem]"
-          src="/images/iphone.png"
-          alt="iphone mockup"
+      <div className=" w-[20%] block relative">
+        <div className="absolute z-10 w-full">
+          <img src="/iphone2.png" alt="iphone mockup" />
+        </div>
+        <Slider
+          className="h-30 block object-cover"
+          sliderContent={sliderImages}
         />
       </div>
     </section>
