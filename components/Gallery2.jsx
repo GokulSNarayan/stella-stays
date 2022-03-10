@@ -1,10 +1,10 @@
 export default function Gallery2() {
   return (
-    <section className="grid grid-cols-5 gap-y-10 mx-auto place-items-stretch p-4">
-      <div className="col-span-2  w-[70%] place-self-end ">
+    <section className="gallery-section">
+      <div className=" md:col-span-2  w-[70%] md:place-self-end ">
         <div className="relative flex flex-col items-center">
           <img src="/images/gallery/image-1.jpg" alt="image 1" />
-          <div className="bg-gray-100 w-5/6 -mt-10 rounded-lg opacity-90 absolute -bottom-8">
+          <div className="bg-gray-100 w-5/6 -mt-10 rounded-lg opacity-90 relative -bottom-8">
             <span>
               <h3>Beyond Living</h3>
               <p>
@@ -19,7 +19,7 @@ export default function Gallery2() {
       <div className="col-span-3  place-self-center relative w-[70%]">
         <div className="relative flex flex-col items-center">
           <img src="/images/gallery/image-2.jpg" alt="image 2" />
-          <div className="bg-gray-100 w-5/6 -mt-10 rounded-lg opacity-90 absolute -bottom-8">
+          <div className="bg-gray-100 w-5/6 -mt-10 rounded-lg opacity-90 relative -bottom-8">
             <span>
               <h3>Prime Locations</h3>
               <p>
@@ -34,7 +34,7 @@ export default function Gallery2() {
       <div className="col-span-3 place-self-center relative w-[70%]">
         <div className="relative flex flex-col items-center">
           <img src="/images/gallery/image-3.jpg" alt="image 3" />
-          <div className="bg-gray-100 w-5/6 -mt-10 rounded-lg opacity-90 absolute -bottom-8">
+          <div className="bg-gray-100 w-5/6 -mt-10 rounded-lg opacity-90 relative -bottom-8">
             <span>
               <h3>Nullam efficitur turpis</h3>
               <p>
@@ -47,10 +47,10 @@ export default function Gallery2() {
         </div>
       </div>
 
-      <div className="col-span-2 place-self-start relative w-[70%]">
+      <div className=" md:col-span-2 md:place-self-start relative w-[70%]">
         <div className="relative flex flex-col items-center">
           <img src="/images/gallery/image-4.jpg" alt="image 4" />
-          <div className="bg-gray-100 w-5/6 -mt-10 rounded-lg opacity-90 absolute -bottom-8">
+          <div className="bg-gray-100 w-5/6 -mt-10 rounded-lg opacity-90 relative -bottom-8">
             <span>
               <h3>A Signature of Excellence</h3>
               <p>

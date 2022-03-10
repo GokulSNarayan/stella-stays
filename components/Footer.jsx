@@ -4,13 +4,13 @@ export default function Footer() {
       id="footer"
       className="flex items-end bg-[#2B4650] min-h-[60vh]  text-[hsla(0,0%,100%,.8)]"
     >
-      <div className="flex justify-start mx-auto lg:flex-col w-[70%]">
+      <div className="flex justify-start mx-auto flex-col w-[70%]">
         <div className="my-10">
           {/* 1st row */}
           <img src="/logo/Vector.svg" alt="Stella" />
           <img src="/logo/Vector-1.svg" alt="Stays" />
         </div>
-        <div className="grid grid-cols-[repeat(4,minmax(0,14rem))] gap-4 mb-28">
+        <div className="footer-external-links">
           {/* 2nd row */}
           <div>
             <h4 className="mb-2 font-thin opacity-40 text-xs">ABOUT</h4>
@@ -73,9 +73,9 @@ export default function Footer() {
           </div>
         </div>
         <hr className="my-6 border-gray-100 border-opacity-30" />
-        <div className="flex justify-between mb-6">
+        <div className="flex flex-col md:flex-row justify-between mb-6">
           {/* 3rd row */}
-          <div className="flex">
+          <div className="flex mb-4 md:m-0">
             <p className="mr-4">
               Copyright &#9400; 2022 StellaStays Inc. All rights resserved.{" "}
             </p>
@@ -83,7 +83,7 @@ export default function Footer() {
             <p className="mr-4">.</p>
             <p className="mr-4">Privacy Policy</p>
           </div>
-          <div className="flex ">
+          <div className="flex">
             <a href="#">
               <img
                 className="h-6 w-6 mr-2"
