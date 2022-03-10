@@ -1,3 +1,5 @@
+import Logo from "./Logo";
+
 export default function Footer() {
   return (
     <section
@@ -7,8 +9,7 @@ export default function Footer() {
       <div className="flex justify-start mx-auto flex-col w-[70%]">
         <div className="my-10">
           {/* 1st row */}
-          <img src="/logo/Vector.svg" alt="Stella" />
-          <img src="/logo/Vector-1.svg" alt="Stays" />
+          <Logo transparent={true} />
         </div>
         <div className="footer-external-links">
           {/* 2nd row */}

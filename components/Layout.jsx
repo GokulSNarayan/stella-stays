@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Logo from "./Logo";
 
 export default function Layout({ children }) {
   const [transparent, settransparent] = useState(true);
@@ -19,14 +20,7 @@ export default function Layout({ children }) {
         }`}
       >
         <div className="flex flex-col self-start ml-2 mt-1 p-2">
-          <img
-            className={`mb-1 ${transparent ? "fill-white" : "fill-[#2B4650]"}`}
-            src="/logo/Vector.svg"
-          ></img>
-          <img
-            className={`${transparent ? "fill-white" : "fill-[#2B4650]"}`}
-            src="/logo/Vector-1.svg"
-          ></img>
+          <Logo transparent={transparent} />
         </div>
         <div>Middle</div>
         <div className="flex items-center justify-end m-4 md:hidden relative">
