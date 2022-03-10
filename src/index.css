@@ -9,4 +9,10 @@
   .heroText {
     @apply absolute text-center top-0 left-0 right-0 bottom-0 translate-y-1/3 z-20 text-white font-[700] text-[120px] leading-none;
   }
+  .mobile-menu {
+    @apply absolute -bottom-4 w-[50vw] opacity-95 bg-white origin-bottom translate-y-full text-black transition-all ease-linear rounded-lg;
+  }
+  .menu-bar {
+    @apply h-10 w-10 flex items-center justify-center hover:rounded-full hover:bg-slate-500 hover:opacity-30;
+  }
 }

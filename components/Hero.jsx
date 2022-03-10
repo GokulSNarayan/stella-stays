@@ -19,7 +19,14 @@ export default function Hero() {
         Escape <br /> the ordinary
       </h1>
       <div className="mx-auto absolute z-10 -bottom-10 shadow-xl bg-white p-2 rounded-2xl h-24 flex max-w-5xl">
-        <input placeholder="City"></input>
+        <form action="">
+          <label htmlFor="citySelection">City</label>
+          <select name="citySelection" id="location">
+            <option value="Dubai">Dubai</option>
+            <option value="Montreal">Montreal</option>
+            <option value="Manama">Manama</option>
+          </select>
+        </form>
         <input placeholder="City"></input>
         <input placeholder="City"></input>
         <input placeholder="City"></input>
