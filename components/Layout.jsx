@@ -11,7 +11,7 @@ export default function Layout({ children }) {
   };
   window.addEventListener("scroll", handleScroll);
   return (
-    <div className="bg-white min-h-screen flex flex-col relative font-sans">
+    <div className="bg-white min-h-screen block relative">
       <nav
         className={`navbar ${
           transparent

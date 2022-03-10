@@ -1,10 +1,10 @@
 export default function Gallery2() {
   return (
     <section className="gallery-section">
-      <div className="lg:self-start lg:justify-self-stretch gallery-image-1 w-[70%]  ">
-        <div className="relative flex flex-col items-center">
+      <div className="block md:flex md:h-1/2 mb-4">
+        <div className=" md:mt-8 md:self-start w-2/5 m-2 p-2 relative flex flex-col items-center">
           <img src="/images/gallery/image-1.jpg" alt="image 1" />
-          <div className="bg-white w-5/6 -mt-10 rounded-lg opacity-90 relative -bottom-4">
+          <div className="gallery-image-text-card">
             <span className="flex items-center justify-start mx-4 p-1">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -28,12 +28,10 @@ export default function Gallery2() {
             </p>
           </div>
         </div>
-      </div>
 
-      <div className="lg:self-end lg:justify-self-start gallery-image-2  relative w-[70%]">
-        <div className="relative flex flex-col items-center">
+        <div className="md:mt-20 md:self-end w-3/5 m-2 p-2 relative flex flex-col items-center">
           <img src="/images/gallery/image-2.jpg" alt="image 2" />
-          <div className="bg-white w-5/6 -mt-10 rounded-lg opacity-90 relative -bottom-4">
+          <div className="gallery-image-text-card">
             <span className="flex items-center justify-start mx-4 p-1">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -64,10 +62,10 @@ export default function Gallery2() {
         </div>
       </div>
 
-      <div className="lg:self-end lg:justify-self-stretch gallery-image-3 gallery-image-3 relative w-[70%]">
-        <div className="relative flex flex-col items-center">
+      <div className="block md:flex md:h-1/2 mb-4">
+        <div className="md:-mt-20 md:self-start w-3/5 m-2 p-2 relative flex flex-col items-center">
           <img src="/images/gallery/image-3.jpg" alt="image 3" />
-          <div className="bg-white w-5/6 -mt-10 rounded-lg opacity-90 relative -bottom-4">
+          <div className="gallery-image-text-card">
             <span className="flex items-center justify-start mx-4 p-1">
               <svg
                 className="h-6 w-6"
@@ -91,12 +89,10 @@ export default function Gallery2() {
             </p>
           </div>
         </div>
-      </div>
 
-      <div className="lg:self-stretch lg:justify-self-stretch gallery-image-4   relative w-[70%]">
-        <div className="relative flex flex-col items-center">
+        <div className="md:-mt-8 md:self-end w-2/5 m-2 p-2 relative flex flex-col items-center">
           <img src="/images/gallery/image-4.jpg" alt="image 4" />
-          <div className="bg-white w-5/6 -mt-10 rounded-lg opacity-90 relative -bottom-4">
+          <div className="gallery-image-text-card">
             <span className="flex items-center justify-start mx-4 p-1">
               <svg
                 className="h-6 w-6"
