@@ -73,7 +73,7 @@ export default function Explore() {
           </h4>
           <div className="flex flex-row justify-end mt-5 md:mt-10 md:px-8">
             <button
-              className="bg-white rounded-full shadow-lg h-10 w-10 flex justify-center items-center p-2"
+              className=" h-10 w-10 flex justify-center items-center p-2"
               onClick={() => swiperRef.current.swiper.slidePrev()}
             >
               <svg
@@ -92,7 +92,7 @@ export default function Explore() {
               </svg>
             </button>
             <button
-              className="bg-white rounded-full shadow-lg h-10 w-10 flex justify-center items-center p-2"
+              className=" h-10 w-10 flex justify-center items-center p-2"
               onClick={() => swiperRef.current.swiper.slideNext()}
             >
               <svg

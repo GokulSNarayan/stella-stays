@@ -1,6 +1,6 @@
 export default function Logo({ transparent }) {
   return (
-    <div className="block h-8 w-20">
+    <div className="block h-10 w-24">
       <svg
         className={`mb-1  ${transparent ? "fill-white" : "fill-[#2B4650]"}`}
         viewBox="0 0 71 15"

@@ -8,16 +8,17 @@ const sliderImages = [
 ];
 export default function Showcase() {
   return (
-    <section className="flex items-start justify-center px-auto my-5 bg-[#F6F8F9] border border-[#D9E5E9]">
+    <section className="showcase-section">
       {/* left col */}
-      <div className="my-6 w-3/6">
-        <div className="py-4">
-          <h1 className="text-2xl mb-2">
-            Hassle free end-to-end digital experience{" "}
+      <div className="flex flex-col items-center justify-center  sm:my-6 sm:w-3/6">
+        <div className="mx-8 flex flex-col justify-center sm:py-4">
+          <h1 className="text-4xl flex-wrap font-semibold mb-4">
+            Duis aute irure dolor in reprehenderit in voluptate
           </h1>
           <h3 className="text-lg mb-6">
-            Bringing the hotel lobby to your pocket, manage your stay from the
-            comfort of your phone.
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui{" "}
+            <br />
+            officia deserunt mollit anim id est laborum.
           </h3>
         </div>
         <div className="w-3/4 p-2">
@@ -27,7 +28,7 @@ export default function Showcase() {
               src="/images/support.svg"
               alt="support"
             />
-            <h3>Review, reserve & manage your stays</h3>
+            <h3>Sagittis vitae et leo duis ut diam quam nulla.</h3>
           </span>
           <span className="flex items-center mb-4">
             <img
@@ -35,7 +36,10 @@ export default function Showcase() {
               src="/images/mail-wifi.svg"
               alt="mail"
             />
-            <h3>Seamless self check-in & check-out</h3>
+            <h3>
+              Faucibus pulvinar elementum integer enim neque volutpat ac
+              tincidunt vitae.
+            </h3>
           </span>
           <span className="flex items-center mb-4">
             <img
@@ -43,7 +47,10 @@ export default function Showcase() {
               src="/images/location.svg"
               alt="location"
             />
-            <h3>An overview of your upcoming trips</h3>
+            <h3>
+              Viverra adipiscing at in tellus integer feugiat scelerisque
+              varius.{" "}
+            </h3>
           </span>
           <span className="flex items-center mb-4">
             <img
@@ -51,7 +58,7 @@ export default function Showcase() {
               src="/images/calender.svg"
               alt="calender"
             />
-            <h3>Contactless support available 24/7</h3>
+            <h3>Elementum curabitur vitae nunc.</h3>
           </span>
         </div>
         <div>
@@ -98,14 +105,13 @@ export default function Showcase() {
         </div>
       </div>
       {/* right col */}
-      <div className=" w-[20%] block relative">
-        <div className="absolute z-10 w-full">
+      <div className="w-[20%] block relative -bottom-24">
+        <div className="absolute z-10">
           <img src="/iphone2.png" alt="iphone mockup" />
         </div>
-        <Slider
-          className="h-30 block object-cover"
-          sliderContent={sliderImages}
-        />
+        <div className="p-[5%] rounded-[15%]">
+          <Slider sliderContent={sliderImages} />
+        </div>
       </div>
     </section>
   );

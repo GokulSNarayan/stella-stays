@@ -7,15 +7,15 @@ export default function Footer() {
       className="flex items-end bg-[#2B4650] min-h-[60vh]  text-[hsla(0,0%,100%,.8)]"
     >
       <div className="flex justify-start mx-auto flex-col w-[70%]">
-        <div className="my-10">
+        <div className="my-6 w-1/4">
           {/* 1st row */}
           <Logo transparent={true} />
         </div>
         <div className="footer-external-links">
           {/* 2nd row */}
           <div>
-            <h4 className="mb-2 font-thin opacity-40 text-xs">ABOUT</h4>
-            <ul className="flex flex-col">
+            <h4 className="mb-2 font-thin opacity-40 text-sm">ABOUT</h4>
+            <ul className="flex flex-col text-base">
               <a className="mb-4" href="javascript:void(0)">
                 Find a Stella
               </a>
@@ -34,8 +34,8 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <h4 className="mb-2 font-thin opacity-40 text-xs">CITIES</h4>
-            <ul className="flex flex-col">
+            <h4 className="mb-2 font-thin opacity-40 text-sm">CITIES</h4>
+            <ul className="flex flex-col text-base">
               <a className="mb-4" href="javascript:void(0)">
                 Dubai
               </a>
@@ -48,8 +48,8 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <h4 className="mb-2 font-thin opacity-40 text-xs">CONTACT US</h4>
-            <ul className="flex flex-col">
+            <h4 className="mb-2 font-thin opacity-40 text-sm">CONTACT US</h4>
+            <ul className="flex flex-col text-base">
               <a className="mb-4" href="javascript:void(0)">
                 WhatsApp
               </a>
@@ -59,16 +59,25 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <h4 className="mb-2 font-thin opacity-40 text-xs">DOWNLOAD</h4>
-            <span className="flex h-12">
-              <a href="javascript:void(0)" className="mr-2 h-16 w-28">
+            <h4 className="mb-2 font-thin opacity-40 text-sm">DOWNLOAD</h4>
+            <span className="flex flex-col lg:flex-row items-start lg:items-center  lg:justify-between h-14">
+              <a
+                href="javascript:void(0)"
+                className="mr-2 flex items-center h-16 w-28 "
+              >
                 <img
-                  className="h-8"
+                  className="h-10"
                   src="https://stellastays.com/static/media/app_store.4b86dc08.svg"
                 ></img>
               </a>
-              <a href="javascript:void(0)" className="mr-2 h-16 w-28">
-                <img src="https://stellastays.com/static/media/play_store.5ef45cd6.svg"></img>
+              <a
+                href="javascript:void(0)"
+                className="flex items-center h-16 w-28 md:m-0"
+              >
+                <img
+                  className="h-10"
+                  src="https://stellastays.com/static/media/play_store.5ef45cd6.svg"
+                ></img>
               </a>
             </span>
           </div>

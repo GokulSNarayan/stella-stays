@@ -28,7 +28,7 @@ export default function Layout({ children }) {
         </div>
         <div
           className={`${
-            showSearchBar ? "flex" : "hidden"
+            showSearchBar ? "hidden md:flex" : "hidden"
           } mx-auto h-full w-1/4 absolute top-0 left-0 right-0 items-center justify-center hover:drop-shadow-2xl transition-all ease-in-out`}
         >
           <button className="rounded-3xl  border border-gray-300 h-3/4  w-3/4 flex items-center justify-around">
