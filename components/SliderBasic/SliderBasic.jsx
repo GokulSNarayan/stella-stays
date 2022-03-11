@@ -1,0 +1,41 @@
+import { Swiper, SwiperSlide } from "swiper/react";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+// import "swiper/css/navigation";
+import "./slider.css";
+import "swiper/css/effect-fade";
+import { Navigation, EffectFade } from "swiper";
+
+export default function SliderBasic({ sliderContent, swiperRef }) {
+  return (
+    <>
+      <Swiper
+        breakpoints={{
+          640: {
+            slidesPerView: 2,
+          },
+          768: {
+            slidesPerView: 4,
+          },
+        }}
+        modules={[Navigation]}
+        className="mySwiper h-full"
+        ref={swiperRef}
+      >
+        {sliderContent.map((image, idx) => (
+          <SwiperSlide key={idx}>
+            <div className="relative m-2 p-2 translate-y-0 hover:-translate-y-1 hover:transform transition-transform ease-in-out">
+              <h3 className="absolute rounded-3xl p-1 text-sm text-white top-5 right-5 bg-gray-600 opacity-70">{`from ${image.currency} ${image.price}`}</h3>
+              <img
+                className="object-contain rounded-3xl"
+                src={image.src}
+                alt="background image"
+              />
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </>
+  );
+}

@@ -20,7 +20,7 @@
     background: linear-gradient(90deg, #72a2af 0%, #4a7889 100%);
   }
   .gallery-section {
-    @apply mb-2 p-4 flex flex-col flex-nowrap sm:flex-wrap lg:mx-48;
+    @apply mb-2 p-4 flex flex-col flex-nowrap sm:flex-wrap lg:mx-72;
   }
 
   .gallery-image-text-card {
