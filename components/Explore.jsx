@@ -64,7 +64,7 @@ export default function Explore() {
   const swiperRef = useRef(null);
   return (
     <section className="flex flex-col mx-10 my-8 sm:mx-20 xl:mx-72">
-      <div className="my-7">
+      <div className="my-7 container">
         <h1 className="text-3xl font-bold mb-4">Explore</h1>
         <span className="flex justify-between">
           <h4>

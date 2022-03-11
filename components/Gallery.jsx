@@ -2,7 +2,7 @@ export default function Gallery() {
   return (
     <section className="gallery-section">
       <div className="block mx-5 lg:m-0 lg:flex lg:h-1/2 mb-4">
-        <div className=" lg:mt-8 lg:self-start lg:w-2/5 m-2 p-2 relative flex flex-col items-center">
+        <div className="m-2 p-2 relative w-full flex flex-col items-center lg:mt-8 lg:self-start lg:w-2/5">
           <img src="/images/gallery/image-1.jpg" alt="image 1" />
           <div className="gallery-image-text-card">
             <span className="flex items-center justify-start mx-4 p-1">
@@ -29,7 +29,7 @@ export default function Gallery() {
           </div>
         </div>
 
-        <div className="lg:mt-20 lg:self-end lg:w-3/5 m-2 p-2 relative flex flex-col items-center">
+        <div className="m-2 p-2 relative w-full flex flex-col items-center lg:mt-20 lg:self-end lg:w-3/5">
           <img src="/images/gallery/image-2.jpg" alt="image 2" />
           <div className="gallery-image-text-card">
             <span className="flex items-center justify-start mx-4 p-1">
@@ -63,7 +63,7 @@ export default function Gallery() {
       </div>
 
       <div className="block mx-5 lg:m-0 lg:flex lg:h-1/2 mb-4">
-        <div className="lg:-mt-20 lg:self-start lg:w-3/5 m-2 p-2 relative flex flex-col items-center">
+        <div className="m-2 p-2 relative w-full flex flex-col  items-center lg:-mt-20 lg:self-start lg:w-3/5">
           <img src="/images/gallery/image-3.jpg" alt="image 3" />
           <div className="gallery-image-text-card">
             <span className="flex items-center justify-start mx-4 p-1">
@@ -90,7 +90,7 @@ export default function Gallery() {
           </div>
         </div>
 
-        <div className="lg:-mt-8 lg:self-end lg:w-2/5 m-2 p-2 relative flex flex-col items-center">
+        <div className="m-2 p-2 relative w-full flex flex-col items-center lg:-mt-8 lg:self-end lg:w-2/5 ">
           <img src="/images/gallery/image-4.jpg" alt="image 4" />
           <div className="gallery-image-text-card">
             <span className="flex items-center justify-start mx-4 p-1">

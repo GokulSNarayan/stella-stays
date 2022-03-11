@@ -4,7 +4,7 @@ import Logo from "./Logo";
 
 export default function Layout({ children }) {
   const [transparent, settransparent] = useState(true);
-  const [showSearchBar, setShowSearchBar] = useState(true);
+  const [showSearchBar, setShowSearchBar] = useState(false);
   const [mobileMenu, setMobileMenu] = useState(false);
   const handleScroll = () => {
     if (window.scrollY >= 300) settransparent(false);

@@ -8,7 +8,6 @@
   }
   .heroText {
     @apply absolute h-min text-center top-20 left-0 right-0 bottom-0 translate-y-full z-20 text-white font-[700] leading-none;
-    @apply text-4xl md:text-6xl lg:text-8xl xl:text-9xl;
   }
   .mobile-menu {
     @apply absolute -bottom-4 w-[50vw] opacity-95 bg-white origin-bottom translate-y-full text-black transition-all ease-linear rounded-lg;
@@ -21,11 +20,11 @@
     background: linear-gradient(90deg, #72a2af 0%, #4a7889 100%);
   }
   .gallery-section {
-    @apply mb-2 p-4 flex flex-col flex-nowrap sm:flex-wrap lg:mx-72;
+    @apply mb-2 p-4 flex flex-col flex-nowrap sm:flex-wrap lg:mx-64 xl:mx-72;
   }
 
   .gallery-image-text-card {
-    @apply bg-white w-5/6  rounded-lg opacity-90 relative bottom-20;
+    @apply bg-white w-3/4 lg:w-5/6  rounded-lg opacity-90 relative bottom-20;
   }
 
   .footer-external-links {

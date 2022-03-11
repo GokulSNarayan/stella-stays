@@ -17,9 +17,14 @@ export default function Hero() {
         className="object-cover bg-local w-full max-h-[88vh] opacity-90"
         sliderContent={sliderImages}
       />
-      <h1 className="heroText">
-        Escape <br /> the ordinary
-      </h1>
+      <span className="heroText">
+        <h1 className=" text-4xl md:text-6xl lg:text-8xl xl:text-9xl;">
+          Escape <br /> the ordinary
+        </h1>
+        <h4 className=" text-xs md:text-base  xl:text-lg;">
+          A new way to stay in your favorite neighbourhoods around the world.
+        </h4>
+      </span>
       <div className="flex items-center w-4/5 flex-col md:flex-row justify-around  mx-auto relative z-20 bottom-16 shadow-xl bg-white p-2 rounded-3xl  max-w-5xl">
         <div className="flex flex-col relative justify-start p-2 m-2 md:mx-4 border-0 border-b-black  hover:border">
           <label

@@ -10,8 +10,8 @@ export default function Showcase() {
   return (
     <section className="showcase-section">
       {/* left col */}
-      <div className="flex flex-col items-center justify-center  sm:my-6 sm:w-3/6">
-        <div className="mx-8 flex flex-col justify-center sm:py-4">
+      <div className="flex flex-col items-center md:items-start justify-center  sm:my-6 sm:w-3/6">
+        <div className="mx-8 md:m-0 flex flex-col justify-center sm:py-4">
           <h1 className="text-4xl flex-wrap font-semibold mb-4">
             Duis aute irure dolor in reprehenderit in voluptate
           </h1>
