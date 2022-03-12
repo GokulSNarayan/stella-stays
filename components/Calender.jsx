@@ -1,13 +1,21 @@
+import { useState } from "react";
+
 export default function Calender() {
+  const [calenderType, setCalenderType] = useState("basic");
+
   return (
     <div className="container relative w-full h-full flex flex-col items-center bg-white shadow-lg rounded-lg cursor-default">
-      <div className=" absolute outline-1 outline-gray-500 shadow-lg rounded-3xl top-5 h-12 w-2/3 md:h-10 md:w-1/4 z-30 flex justify-around items-center text-black">
+      <div
+        className=" absolute outline-1 outline-gray-500 shadow-lg rounded-3xl top-5 h-12 w-2/3 md:h-10 md:w-1/4 z-30 flex justify-around items-center text-black"
+        onChange={(e) => setCalenderType(e.target.value)}
+      >
         <div className="h-full w-full inline-block p-1 hover:cursor-pointer ">
           <input
             className="hidden peer"
             name="calender"
             type="radio"
             id="basic"
+            value="basic"
             defaultChecked
           />
           <label
@@ -23,6 +31,7 @@ export default function Calender() {
             name="calender"
             type="radio"
             id="flexible"
+            value="flexible"
           />
           <label
             htmlFor="flexible"

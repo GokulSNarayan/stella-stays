@@ -63,7 +63,7 @@ export default function Footer() {
             <span className="flex flex-col lg:flex-row items-start lg:items-center  lg:justify-between h-14">
               <a
                 href="javascript:void(0)"
-                className="block mb-2 md:inline-block md:mr-1 "
+                className="block mb-2 md:mb-0 md:inline-block md:mr-1 "
               >
                 <img
                   className="h-10"
