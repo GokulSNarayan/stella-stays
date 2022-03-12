@@ -2,7 +2,11 @@ export default function Logo({ transparent }) {
   return (
     <div className="block h-10 w-24">
       <svg
-        className={`mb-1  ${transparent ? "fill-white" : "fill-[#2B4650]"}`}
+        className={`mb-1  ${
+          transparent
+            ? "fill-white"
+            : "fill-gradient-to-r from-gradientA to-gradientB"
+        }`}
         viewBox="0 0 71 15"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -10,7 +14,11 @@ export default function Logo({ transparent }) {
       </svg>
 
       <svg
-        className={`${transparent ? "fill-white" : "fill-[#2B4650]"}`}
+        className={`${
+          transparent
+            ? "fill-white"
+            : "fill-gradient-to-r from-gradientA to-gradientB"
+        }`}
         viewBox="0 0 96 23"
         xmlns="http://www.w3.org/2000/svg"
       >

@@ -105,11 +105,11 @@ export default function Showcase() {
         </div>
       </div>
       {/* right col */}
-      <div className="w-[20%] block relative -bottom-24">
-        <div className="absolute z-10">
+      <div className="hidden w-[20%] md:inline-block relative -bottom-24">
+        <div className="absolute z-10 inline-block">
           <img src="/iphone2.png" alt="iphone mockup" />
         </div>
-        <div className="p-[5%] rounded-[15%]">
+        <div className="p-[5%] rounded-[15%] ">
           <Slider sliderContent={sliderImages} />
         </div>
       </div>

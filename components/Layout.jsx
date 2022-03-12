@@ -55,6 +55,7 @@ export default function Layout({ children }) {
           <button
             className="menu-bar"
             onClick={() => setMobileMenu((prev) => !prev)}
+            onBlur={() => setMobileMenu(false)}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -92,29 +93,53 @@ export default function Layout({ children }) {
             </ul>
           </div>
         </div>
-        <div className="hidden items-center justify-around md:flex">
+        <div className="hidden mr-2 items-center font-semibold justify-around md:flex">
           <a
-            className={`flex items-center justify-center rounded-xl w-32 shadow-md mr-2 ${
-              transparent ? "bg-transparent border" : "bg-[#2B4650] text-white"
+            className={`w-32 block md:inline-block md:m-1 md:p-2 text-center rounded-3xl hover:bg-black/10  ${
+              transparent
+                ? "bg-transparent border"
+                : "bg-gradient-to-r from-gradientA to-gradientB text-white"
             }`}
             href="javascript:void(0)"
           >
             Help Center
           </a>
-          <a className="mr-2" href="#footer">
+          <a
+            className="block md:inline-block md:m-1 md:p-2 rounded-3xl hover:bg-black/10"
+            href="#footer"
+          >
             Contact
           </a>
-          <span className="mr-2">|</span>
-          <a className="mr-2" href="javascript:void(0)">
-            About
-          </a>
+          <span className="block md:inline-block md:m-1 md:p-2 ">|</span>
           <a
-            className={`flex items-center justify-center w-10 h-10 mx-4 rounded-full shadow-md md:mr-2 ${
-              transparent ? "bg-white text-black" : "bg-[#2B4650] text-white"
-            }`}
+            className="block md:inline-block md:m-1 md:p-2  rounded-3xl hover:bg-black/10"
             href="javascript:void(0)"
           >
-            TT
+            About
+          </a>
+          <a className="block md:inline-block md:m-1" href="javascript:void(0)">
+            <div
+              className={`${
+                transparent
+                  ? "bg-white text-black"
+                  : "bg-gradient-to-r from-gradientA to-gradientB text-white"
+              } w-10  inline-block md:p-2 text-center rounded-full hover:bg-black/10`}
+            >
+              TT
+            </div>
+            <span className="inline-block align-middle">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-4 w-4 fill-transparent stroke-black"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </span>
           </a>
         </div>
       </nav>

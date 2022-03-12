@@ -63,17 +63,14 @@ export default function Footer() {
             <span className="flex flex-col lg:flex-row items-start lg:items-center  lg:justify-between h-14">
               <a
                 href="javascript:void(0)"
-                className="mr-2 flex items-center h-16 w-28 "
+                className="block mb-2 md:inline-block md:mr-1 "
               >
                 <img
                   className="h-10"
                   src="https://stellastays.com/static/media/app_store.4b86dc08.svg"
                 ></img>
               </a>
-              <a
-                href="javascript:void(0)"
-                className="flex items-center h-16 w-28 md:m-0"
-              >
+              <a href="javascript:void(0)" className="block md:inline-block">
                 <img
                   className="h-10"
                   src="https://stellastays.com/static/media/play_store.5ef45cd6.svg"
@@ -94,24 +91,24 @@ export default function Footer() {
             <p className="mr-4">Privacy Policy</p>
           </div>
           <div className="flex">
-            <a href="#">
+            <a href="javascript:void(0)" className="inline-block">
               <img
-                className="h-6 w-6 mr-2"
+                className="h-6 w-6 mx-2"
                 src="/images/linkedin-brands.svg"
                 alt="linkedin"
               />
             </a>
-            <a href="#">
+            <a href="javascript:void(0)" className="inline-block">
               <img
-                className="h-6 w-6 mr-2"
+                className="h-6 w-6 mx-2"
                 src="/images/facebook-f-brands.svg"
                 alt="linkedin"
               />
             </a>
-            <a href="#">
+            <a href="javascript:void(0)" className="inline-block">
               {" "}
               <img
-                className="h-6 w-6 mr-2"
+                className="h-6 w-6 mx-2"
                 src="/images/instagram-brands.svg"
                 alt="linkedin"
               />
