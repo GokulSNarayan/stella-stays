@@ -1,15 +1,17 @@
 import { useState } from "react";
+import DatePicker from "./DatePicker";
+import FlexiDatePicker from "./FlexiDatePicker";
 
 export default function Calender() {
   const [calenderType, setCalenderType] = useState("basic");
 
   return (
-    <div className="container relative w-full h-full flex flex-col items-center bg-white shadow-lg rounded-lg cursor-default">
+    <div className="container relative flex flex-col items-center bg-white shadow-lg rounded-lg cursor-default divide-y-2 divide-y-reverse">
       <div
-        className=" absolute outline-1 outline-gray-500 shadow-lg rounded-3xl top-5 h-12 w-2/3 md:h-10 md:w-1/4 z-30 flex justify-around items-center text-black"
+        className="outline-1 outline-gray-500 shadow-lg rounded-3xl  w-2/5 mb-2 flex justify-around items-center text-black"
         onChange={(e) => setCalenderType(e.target.value)}
       >
-        <div className="h-full w-full inline-block p-1 hover:cursor-pointer ">
+        <div className="h-10 w-full inline-block p-1 hover:cursor-pointer ">
           <input
             className="hidden peer"
             name="calender"
@@ -25,7 +27,7 @@ export default function Calender() {
             <span>Calender</span>
           </label>
         </div>
-        <div className="h-full w-full inline-block p-1hover:cursor-pointer">
+        <div className="h-10 w-full inline-block p-1 hover:cursor-pointer">
           <input
             className="hidden peer"
             name="calender"
@@ -44,6 +46,18 @@ export default function Calender() {
       <span className="block">
         <hr />
       </span>
+      <div className="w-full divide-y-2 divide-y-reverse "></div>
+      <div className="block">
+        {calenderType === "basic" ? (
+          <div className="mx-2 ">
+            <DatePicker />
+          </div>
+        ) : (
+          <div className="w-[40vw]">
+            <FlexiDatePicker />
+          </div>
+        )}
+      </div>
     </div>
   );
 }

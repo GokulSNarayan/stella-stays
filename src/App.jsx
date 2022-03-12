@@ -1,5 +1,8 @@
 import { useState } from "react";
 import "./App.css";
+import DateFnsAdapter from "@mui/lab/AdapterDateFns";
+import LocalizationProvider from "@mui/lab/LocalizationProvider";
+
 import Hero from "../components/Hero";
 import Layout from "../components/Layout";
 import Explore from "../components/Explore";
@@ -11,13 +14,15 @@ function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <Layout>
-      <Hero />
-      <Explore />
-      <Showcase />
-      <Gallery />
-      <Footer />
-    </Layout>
+    <LocalizationProvider dateAdapter={DateFnsAdapter}>
+      <Layout>
+        <Hero />
+        <Explore />
+        <Showcase />
+        <Gallery />
+        <Footer />
+      </Layout>
+    </LocalizationProvider>
   );
 }
 

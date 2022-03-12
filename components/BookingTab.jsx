@@ -34,14 +34,14 @@ export default function BookingTab() {
       <button
         className="w-11/12 md:w-1/4 relative block md:inline-block text-left p-2 m-2  border border-white hover:border-b-black"
         onClick={() => setShowCalender(true)}
-        onBlur={() => setShowCalender(false)}
+        // onBlur={() => setShowCalender(false)}
       >
         <span className=" block text-xs opacity-60 font-thin mb-1">DATES</span>
         <span className="block font-semibold">Select dates</span>
         <div
           className={`${
             showCalender ? "block" : "hidden"
-          } absolute -bottom-1 z-30 md:-bottom-4 md:-translate-x-1/4  h-64 md:w-[40vw] left-0 right-0 translate-y-full`}
+          } absolute -bottom-1 z-30 md:-bottom-4 md:-translate-x-1/4 w-max left-0 right-0 translate-y-full`}
         >
           <Calender />
         </div>

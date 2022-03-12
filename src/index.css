@@ -34,4 +34,8 @@
   .showcase-section {
     @apply flex flex-col mx-auto md:flex-row sm:items-center justify-center sm:my-5 bg-[#F6F8F9] border border-[#D9E5E9];
   }
+  ,
+  .checkButton {
+    @apply h-full w-full rounded-3xl flex justify-center items-center transition-colors;
+  }
 }
