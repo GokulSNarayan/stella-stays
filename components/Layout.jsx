@@ -85,7 +85,7 @@ export default function Layout({ children }) {
               </li>
               <hr className="w-11/12 flex self-center" />
               <li className="p-2 mb-2">
-                <a href=""></a>Contact
+                <a href="#footer"></a>Contact
               </li>
               <li className="p-2 mb-2">
                 <a href=""></a>Help Center

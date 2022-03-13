@@ -1,5 +1,12 @@
 import BookingTab from "./BookingTab";
-import Slider from "./Slider";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination, EffectFade } from "swiper";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import "swiper/css/effect-fade";
 
 const sliderImages = [
   "/slider/image1.webp",
@@ -12,8 +19,30 @@ const sliderImages = [
 export default function Hero() {
   return (
     <section className="bg-white block -mt-48">
-      <div className="bg-contain relative md:bg-cover w-full  opacity-90 ">
-        <Slider sliderContent={sliderImages} delay={5000} />
+      <div className="bg-contain relative md:bg-cover  opacity-90 ">
+        <Swiper
+          spaceBetween={30}
+          centeredSlides={true}
+          effect={"fade"}
+          autoplay={{
+            delay: 5000,
+            disableOnInteraction: false,
+          }}
+          loop={true}
+          rewind={false}
+          modules={[Autoplay, Pagination, EffectFade]}
+          className="mySwiper"
+        >
+          {sliderImages.map((image, idx) => (
+            <SwiperSlide key={idx}>
+              <img
+                className="bg-no-repeat h-screen w-screen object-none sm:object-cover"
+                src={image}
+                alt="background image"
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
       <span className="heroText">
         <h1 className=" text-5xl md:text-6xl lg:text-8xl xl:text-9xl;">

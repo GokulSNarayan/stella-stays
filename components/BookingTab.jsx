@@ -6,13 +6,14 @@ export default function BookingTab() {
   const [location, setLocation] = useState("");
   const [isCalenderVisible, setIsCalenderVisible] = useState(false);
   const [isDropDownVisible, setIsDropDownVisible] = useState(false);
+  const [displayDate, setDisplayDate] = useState(null);
   const [guests, setGuests] = useState(0);
   return (
-    <div className=" mx-auto w-full xl:w-3/4 relative z-20 -top-20 shadow-xl flex items-center flex-col md:flex-row justify-around min-w-5xl bg-white p-2 rounded-3xl  ">
-      <div className="relative w-[80%] md:w-auto self-start block md:inline-block text-left p-2 m-2 border border-white hover:border-b-black">
+    <div className=" mx-auto w-full xl:w-3/4 relative z-20 -top-12 shadow-xl flex items-center flex-col md:flex-row justify-around min-w-5xl bg-white p-2 rounded-3xl  ">
+      <div className="relative w-4/5 md:w-1/4 self-start block md:inline-block text-left p-2 m-2 border border-white hover:border-b-black">
         <span className="block text-xs opacity-60 font-thin mb-1">CITY</span>
         <button
-          className="block font-semibold w-[100px] "
+          className="block font-semibold w-[100px] text-left"
           onClick={() => setIsDropDownVisible((prev) => !prev)}
         >
           {location !== "" ? (
@@ -34,24 +35,27 @@ export default function BookingTab() {
         </div>
       </div>
       <span className="hidden md:inline-block  md:mx-4">|</span>
-      <div className="relative self-start w-[200px] block md:inline-block text-left p-2 m-2  border border-white hover:border-b-black">
+      <div className="relative w-[150px] md:w-1/4 self-start  block md:inline-block text-left p-2 m-2  border border-white hover:border-b-black">
         <span className=" block text-xs opacity-60 font-thin mb-1">DATES</span>
         <button
           onClick={() => setIsCalenderVisible((prev) => !prev)}
-          className="block font-semibold"
+          className="block font-semibold "
         >
-          Select dates
+          {displayDate === null ? "Select dates" : displayDate}
         </button>
         <div
           className={`${
             isCalenderVisible ? "block" : "hidden"
-          } absolute -bottom-1 z-30 md:-bottom-4 md:-translate-x-1/4 w-max left-0 right-0 translate-y-full`}
+          } absolute -bottom-1 z-30 md:-bottom-4 -translate-x-6 md:-translate-x-1/4 w-max left-0 right-0 translate-y-full`}
         >
-          <Calender setIsCalenderVisible={setIsCalenderVisible} />
+          <Calender
+            setIsCalenderVisible={setIsCalenderVisible}
+            setDisplayDate={setDisplayDate}
+          />
         </div>
       </div>
       <span className="hidden md:inline-block  md:mx-4">|</span>
-      <div className="block self-start md:inline-block text-left mb-2 p-2 m-2 ">
+      <div className="block w-full md:w-1/4 self-start md:inline-block text-left mb-2 p-2 m-2 ">
         <span className="inline-block  p-1 w-[100px]">
           <span
             className=" block text-xs opacity-60 font-thin mb-1"
@@ -105,7 +109,7 @@ export default function BookingTab() {
           </button>
         </div>
       </div>
-      <button className="block self-center w-[80%] md:w-[100px] md:inline-block search-button md:mx-4">
+      <button className="block self-center w-full md:w-1/4 mx-4  md:inline-block search-button ">
         <span className="inline-flex items-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"

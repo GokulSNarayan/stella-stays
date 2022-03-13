@@ -24,7 +24,7 @@ export default function Slider({ sliderContent, delay }) {
       {sliderContent.map((image, idx) => (
         <SwiperSlide key={idx}>
           <img
-            className="bg-no-repeat h-screen xl:h-full object-none sm:object-cover"
+            className="bg-no-repeat  object-none sm:object-cover"
             src={image}
             alt="background image"
           />
