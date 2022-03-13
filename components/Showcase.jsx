@@ -1,10 +1,10 @@
 import Slider from "./Slider";
 
 const sliderImages = [
-  "/mobileImages/image1.jpg",
-  "/mobileImages/image2.jpg",
-  "/mobileImages/image3.jpg",
-  "/mobileImages/image4.jpg",
+  "https://stellastays.com/static/media/home.280c73ff.jpg",
+  "https://stellastays.com/static/media/search.e1016aeb.jpg",
+  "https://stellastays.com/static/media/pre-checkin.505f4280.jpg",
+  "https://stellastays.com/static/media/reservation.a5848dac.jpg",
 ];
 export default function Showcase() {
   return (
@@ -107,7 +107,10 @@ export default function Showcase() {
       {/* right col */}
       <div className="hidden w-[20%] md:inline-block relative -bottom-24">
         <div className="absolute z-10 inline-block">
-          <img src="/iphone2.png" alt="iphone mockup" />
+          <img
+            src="https://stellastays.com/static/media/hardware.e76a5c70.png"
+            alt="iphone mockup"
+          />
         </div>
         <div className="p-[5%] rounded-[15%] ">
           <Slider sliderContent={sliderImages} delay={3000} />
