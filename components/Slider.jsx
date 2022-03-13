@@ -6,14 +6,14 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css/effect-fade";
 import { Autoplay, Pagination, EffectFade } from "swiper";
-export default function Slider({ sliderContent }) {
+export default function Slider({ sliderContent, delay }) {
   return (
     <Swiper
       spaceBetween={30}
       centeredSlides={true}
       effect={"fade"}
       autoplay={{
-        delay: 3000,
+        delay: delay,
         disableOnInteraction: false,
       }}
       loop={true}

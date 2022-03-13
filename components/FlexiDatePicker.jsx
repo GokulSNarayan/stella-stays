@@ -26,10 +26,6 @@ export default function FlexiDatePicker() {
   const nextYear = parseInt(currentYear) + 1;
   const [category, setCategory] = useState("Weekend");
   const [selectedMonths, setSelectedMonths] = useState([]);
-  console.log(
-    "🚀 ~ file: FlexiDatePicker.jsx ~ line 26 ~ FlexiDatePicker ~ currentMonth",
-    currentMonth
-  );
 
   const handleCheck = (event) => {
     let month = event.target.value;
@@ -49,7 +45,7 @@ export default function FlexiDatePicker() {
   };
 
   return (
-    <div className=" md:container min-h-fit mb-10">
+    <div className=" md:container min-h-fit mb-10 mx-2">
       <div className="flex flex-col items-center justify-center">
         <div className="block my-4 mx-auto h-4 mb-4">
           Stay for a <span className="font-semibold">{` ${category}`}</span>
@@ -89,7 +85,7 @@ export default function FlexiDatePicker() {
         </div>
         <h2 className="text-centered-line">{currentYear}</h2>
 
-        <div className=" my-4 grid grid-cols-1 gap-1 md:grid-cols-2 lg:grid-cols-6 lg:gap-2 lg:gap-y-2">
+        <div className=" my-4 grid grid-cols-3 gap-2 md:grid-cols-2 lg:grid-cols-6 lg:gap-2 lg:gap-y-2">
           {Object.keys(months).map((monthId, idx) => {
             if (monthId >= currentMonth) {
               return (
@@ -107,7 +103,7 @@ export default function FlexiDatePicker() {
           })}
         </div>
         <h2 className="text-centered-line">{nextYear}</h2>
-        <div className=" my-4 grid grid-cols-1 gap-1 md:grid-cols-2 lg:grid-cols-6 lg:gap-2 lg:gap-y-2">
+        <div className=" my-4 grid grid-cols-3 gap-2 md:grid-cols-2 lg:grid-cols-6 lg:gap-2 lg:gap-y-2">
           {Object.keys(months).map((monthId, idx) => {
             if (monthId < currentMonth) {
               return (

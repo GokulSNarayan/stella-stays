@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Logo from "./Logo";
 
 export default function Layout({ children }) {
   const [transparent, settransparent] = useState(true);
   const [showSearchBar, setShowSearchBar] = useState(false);
   const [mobileMenu, setMobileMenu] = useState(false);
+  const contactRef = useRef();
   const handleScroll = () => {
     if (window.scrollY >= 300) settransparent(false);
     else settransparent(true);
@@ -14,7 +15,7 @@ export default function Layout({ children }) {
   };
   window.addEventListener("scroll", handleScroll);
   return (
-    <div className="bg-white min-h-screen block relative">
+    <div className="bg-white min-h-screen block relative scroll-smooth">
       <nav
         className={`navbar ${
           transparent

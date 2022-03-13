@@ -13,7 +13,7 @@ export default function Hero() {
   return (
     <section className="bg-white block -mt-48">
       <div className="bg-contain relative md:bg-cover w-full  opacity-90 ">
-        <Slider sliderContent={sliderImages} />
+        <Slider sliderContent={sliderImages} delay={5000} />
       </div>
       <span className="heroText">
         <h1 className=" text-5xl md:text-6xl lg:text-8xl xl:text-9xl;">

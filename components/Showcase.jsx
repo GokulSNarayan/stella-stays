@@ -110,7 +110,7 @@ export default function Showcase() {
           <img src="/iphone2.png" alt="iphone mockup" />
         </div>
         <div className="p-[5%] rounded-[15%] ">
-          <Slider sliderContent={sliderImages} />
+          <Slider sliderContent={sliderImages} delay={3000} />
         </div>
       </div>
     </section>

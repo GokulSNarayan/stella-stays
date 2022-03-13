@@ -2,7 +2,7 @@ import { useState } from "react";
 import DatePicker from "./DatePicker";
 import FlexiDatePicker from "./FlexiDatePicker";
 
-export default function Calender({ closeHandler }) {
+export default function Calender({ setIsCalenderVisible }) {
   const [calenderType, setCalenderType] = useState("basic");
 
   return (
@@ -44,7 +44,7 @@ export default function Calender({ closeHandler }) {
         </div>
       </div>
       <div className="flex self-end justify-self-center mr-2">
-        <button onClick={() => closeHandler(false)}>
+        <button onClick={() => setIsCalenderVisible(false)}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-6 w-6"
@@ -72,7 +72,7 @@ export default function Calender({ closeHandler }) {
             <DatePicker />
           </div>
         ) : (
-          <div className="sm:w-[80vw] lg:w-[40vw]">
+          <div className="w-[80vw] lg:w-[40vw]">
             <FlexiDatePicker />
           </div>
         )}

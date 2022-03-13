@@ -4,48 +4,52 @@ import DropDown from "./DropDown";
 
 export default function BookingTab() {
   const [location, setLocation] = useState("");
-  const [showCalender, setShowCalender] = useState(false);
-  const [showDropDown, setShowDropDown] = useState(false);
+  const [isCalenderVisible, setIsCalenderVisible] = useState(false);
+  const [isDropDownVisible, setIsDropDownVisible] = useState(false);
   const [guests, setGuests] = useState(0);
   return (
     <div className=" mx-auto w-full xl:w-3/4 relative z-20 -top-20 shadow-xl flex items-center flex-col md:flex-row justify-around min-w-5xl bg-white p-2 rounded-3xl  ">
-      <button
-        className="relative w-[80%] md:w-auto self-start block md:inline-block text-left p-2 m-2 border border-white hover:border-b-black"
-        onClick={() => setShowDropDown(true)}
-        onBlur={() => setShowDropDown(false)}
-      >
+      <div className="relative w-[80%] md:w-auto self-start block md:inline-block text-left p-2 m-2 border border-white hover:border-b-black">
         <span className="block text-xs opacity-60 font-thin mb-1">CITY</span>
-        <div className="block font-semibold">
-          {location !== "" ? location : "Select a city"}
-        </div>
+        <button
+          className="block font-semibold w-[100px] "
+          onClick={() => setIsDropDownVisible((prev) => !prev)}
+        >
+          {location !== "" ? (
+            <span className="font-semibold">{location}</span>
+          ) : (
+            "Select a city"
+          )}
+        </button>
         <div
           className={`${
-            showDropDown ? "block" : "hidden"
+            isDropDownVisible ? "block" : "hidden"
           } absolute -bottom-1 z-30 md:-bottom-4 w-full left-0  md:left-3 md:right-0 translate-y-full `}
         >
           <DropDown
             changeCity={setLocation}
-            showMenu={setShowDropDown}
+            toggleMenu={setIsDropDownVisible}
             selectedOption={location}
           />
         </div>
-      </button>
+      </div>
       <span className="hidden md:inline-block  md:mx-4">|</span>
-      <button
-        className="relative self-start w-[200px] block md:inline-block text-left p-2 m-2  border border-white hover:border-b-black"
-        onClick={() => setShowCalender(true)}
-        onBlur={() => setShowCalender(false)}
-      >
+      <div className="relative self-start w-[200px] block md:inline-block text-left p-2 m-2  border border-white hover:border-b-black">
         <span className=" block text-xs opacity-60 font-thin mb-1">DATES</span>
-        <div className="block font-semibold">Select dates</div>
+        <button
+          onClick={() => setIsCalenderVisible((prev) => !prev)}
+          className="block font-semibold"
+        >
+          Select dates
+        </button>
         <div
           className={`${
-            showCalender ? "block" : "hidden"
+            isCalenderVisible ? "block" : "hidden"
           } absolute -bottom-1 z-30 md:-bottom-4 md:-translate-x-1/4 w-max left-0 right-0 translate-y-full`}
         >
-          <Calender closeHandler={setShowCalender} />
+          <Calender setIsCalenderVisible={setIsCalenderVisible} />
         </div>
-      </button>
+      </div>
       <span className="hidden md:inline-block  md:mx-4">|</span>
       <div className="block self-start md:inline-block text-left mb-2 p-2 m-2 ">
         <span className="inline-block  p-1 w-[100px]">
