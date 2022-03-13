@@ -6,7 +6,7 @@ export default function DropDown({ changeCity, showMenu, selectedOption }) {
     showMenu((prev) => !prev);
   };
   return (
-    <div className="container relative w-full h-full flex flex-col  bg-white shadow-lg rounded-lg">
+    <div className="container relative w-[50vw] md:w-full h-full flex flex-col  bg-white shadow-lg rounded-lg">
       <ul className="block text-left">
         {options.map((option, idx) => (
           <li

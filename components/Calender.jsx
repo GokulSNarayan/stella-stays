@@ -2,7 +2,7 @@ import { useState } from "react";
 import DatePicker from "./DatePicker";
 import FlexiDatePicker from "./FlexiDatePicker";
 
-export default function Calender() {
+export default function Calender({ closeHandler }) {
   const [calenderType, setCalenderType] = useState("basic");
 
   return (
@@ -22,7 +22,7 @@ export default function Calender() {
           />
           <label
             htmlFor="basic"
-            className=" h-full w-full rounded-3xl flex justify-center items-center transition-colors bg-white peer-checked:bg-gradient-to-r from-gradientA to-gradientB"
+            className=" h-full w-full p-2 rounded-3xl flex justify-center items-center transition-colors bg-white peer-checked:bg-gradient-to-r from-gradientA to-gradientB"
           >
             <span>Calender</span>
           </label>
@@ -37,12 +37,31 @@ export default function Calender() {
           />
           <label
             htmlFor="flexible"
-            className="h-full w-full rounded-3xl flex justify-center items-center transition-colors bg-white peer-checked:bg-gradient-to-r from-gradientA to-gradientB "
+            className="h-full w-full p-2 rounded-3xl flex justify-center items-center transition-colors bg-white peer-checked:bg-gradient-to-r from-gradientA to-gradientB "
           >
             <span>Flexible</span>
           </label>
         </div>
       </div>
+      <div className="flex self-end justify-self-center mr-2">
+        <button onClick={() => closeHandler(false)}>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth={2}
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+      </div>
+      {/* <div></div> */}
       <span className="block">
         <hr />
       </span>
@@ -53,7 +72,7 @@ export default function Calender() {
             <DatePicker />
           </div>
         ) : (
-          <div className="w-[40vw]">
+          <div className="sm:w-[80vw] lg:w-[40vw]">
             <FlexiDatePicker />
           </div>
         )}

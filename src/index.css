@@ -7,7 +7,7 @@
     @apply flex top-0 z-30 justify-between h-16  w-full fixed transition-colors ease-in;
   }
   .heroText {
-    @apply absolute h-min text-center  md:top-32 lg:top-36  xl:top-40 left-0 right-0 md:bottom-0 md:translate-y-full z-20 text-white font-[700] leading-none;
+    @apply absolute h-min text-center top-96 mx-2 md:top-80  lg:top-36  xl:top-40 left-0 right-0 md:bottom-0 md:translate-y-full z-20 text-white font-[700] leading-none;
   }
   .mobile-menu {
     @apply absolute -bottom-4 w-[50vw] opacity-95 bg-white origin-bottom translate-y-full text-black transition-all ease-linear rounded-lg;
@@ -24,7 +24,7 @@
   }
 
   .gallery-image-text-card {
-    @apply bg-white w-3/4 lg:w-5/6  rounded-lg opacity-90 relative bottom-20;
+    @apply bg-white w-[90%]  rounded-lg opacity-90 relative bottom-20;
   }
 
   .footer-external-links {
@@ -32,10 +32,30 @@
   }
 
   .showcase-section {
-    @apply flex flex-col mx-auto md:flex-row sm:items-center justify-center sm:my-5 bg-[#F6F8F9] border border-[#D9E5E9];
+    @apply p-4 flex flex-col mx-auto md:flex-row sm:items-center justify-center sm:my-5 bg-[#F6F8F9] border border-[#D9E5E9];
   }
-  ,
+
   .checkButton {
-    @apply h-full w-full rounded-3xl flex justify-center items-center transition-colors;
+    @apply rounded-3xl p-2 shadow-md peer-checked:-translate-y-1 transition-all flex justify-center items-center border border-white peer-checked:border-gradientB;
   }
+}
+
+.text-centered-line {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+}
+.text-centered-line:before,
+.text-centered-line:after {
+  content: "";
+  flex: 1 1;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  margin: auto;
+  opacity: 0.4;
+}
+.text-centered-line:before {
+  margin-right: 10px;
+}
+.text-centered-line:after {
+  margin-left: 10px;
 }

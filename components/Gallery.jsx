@@ -20,9 +20,11 @@ export default function Gallery() {
                   d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
                 />
               </svg>
-              <h3 className="text-lg font-bold mx-4 p-2">Beyond Living</h3>
+              <h3 className="text-md md:text-lg font-bold mx-1 p-1 md:mx-4 md:p-2">
+                Beyond Living
+              </h3>
             </span>
-            <p className=" mx-4 p-1">
+            <p className="mx-1 text-sm md:text-base md:mx-4 p-1">
               Modern and fresh, our spaces are outfitted with comfort and style,
               be it for a quick getaway to a long term stay.
             </p>
@@ -52,9 +54,11 @@ export default function Gallery() {
                   d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                 />
               </svg>
-              <h3 className="text-lg font-bold mx-4 p-2">Prime Locations</h3>
+              <h3 className="text-md md:text-lg font-bold mx-1 p-1 md:mx-4 md:p-2">
+                Prime Locations
+              </h3>
             </span>
-            <p className=" mx-4 p-1">
+            <p className="mx-1 text-sm md:text-base md:mx-4 p-1">
               Breathtaking views in convenient and sought after locations, a
               little something for everyone.{" "}
             </p>
@@ -78,11 +82,11 @@ export default function Gallery() {
                   fill="black"
                 />
               </svg>
-              <h3 className="text-lg font-bold mx-4 p-2">
+              <h3 className="text-md md:text-lg font-bold mx-1 p-1 md:mx-4 md:p-2">
                 Nullam efficitur turpis
               </h3>
             </span>
-            <p className=" mx-4 p-1">
+            <p className="mx-1 text-sm md:text-base md:mx-4 p-1">
               Phasellus fermentum tellus vitae ante vehicula posuere. Curabitur
               metus metus, feugiat non semper lacinia, maximus sit amet ligula.
               Proin dictum quis ipsum.
@@ -105,11 +109,11 @@ export default function Gallery() {
                   fill="black"
                 />
               </svg>
-              <h3 className="text-lg font-bold mx-4 p-2">
+              <h3 className="text-md md:text-lg font-bold mx-1 p-1 md:mx-4 md:p-2">
                 A Signature of Excellence
               </h3>
             </span>
-            <p className=" mx-4 p-1">
+            <p className="mx-1 text-sm md:text-base md:mx-4 p-1">
               24/7 guest concierge, seamless check-in and immaculate
               cleanliness, always a flawless stay.
             </p>

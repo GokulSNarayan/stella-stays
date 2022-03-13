@@ -8,16 +8,16 @@ export default function BookingTab() {
   const [showDropDown, setShowDropDown] = useState(false);
   const [guests, setGuests] = useState(0);
   return (
-    <div className=" mx-auto relative z-20  -top-20 shadow-xl flex items-center w-4/5 flex-col md:flex-row justify-around  bg-white p-2 rounded-3xl  max-w-5xl">
+    <div className=" mx-auto w-full xl:w-3/4 relative z-20 -top-20 shadow-xl flex items-center flex-col md:flex-row justify-around min-w-5xl bg-white p-2 rounded-3xl  ">
       <button
-        className="w-11/12 md:w-1/4 relative block md:inline-block text-left p-2 m-2 border border-white hover:border-b-black"
+        className="relative w-[80%] md:w-auto self-start block md:inline-block text-left p-2 m-2 border border-white hover:border-b-black"
         onClick={() => setShowDropDown(true)}
         onBlur={() => setShowDropDown(false)}
       >
         <span className="block text-xs opacity-60 font-thin mb-1">CITY</span>
-        <span className="block font-semibold">
+        <div className="block font-semibold">
           {location !== "" ? location : "Select a city"}
-        </span>
+        </div>
         <div
           className={`${
             showDropDown ? "block" : "hidden"
@@ -32,36 +32,36 @@ export default function BookingTab() {
       </button>
       <span className="hidden md:inline-block  md:mx-4">|</span>
       <button
-        className="w-11/12 md:w-1/4 relative block md:inline-block text-left p-2 m-2  border border-white hover:border-b-black"
+        className="relative self-start w-[200px] block md:inline-block text-left p-2 m-2  border border-white hover:border-b-black"
         onClick={() => setShowCalender(true)}
-        // onBlur={() => setShowCalender(false)}
+        onBlur={() => setShowCalender(false)}
       >
         <span className=" block text-xs opacity-60 font-thin mb-1">DATES</span>
-        <span className="block font-semibold">Select dates</span>
+        <div className="block font-semibold">Select dates</div>
         <div
           className={`${
             showCalender ? "block" : "hidden"
           } absolute -bottom-1 z-30 md:-bottom-4 md:-translate-x-1/4 w-max left-0 right-0 translate-y-full`}
         >
-          <Calender />
+          <Calender closeHandler={setShowCalender} />
         </div>
       </button>
       <span className="hidden md:inline-block  md:mx-4">|</span>
-      <div className=" w-11/12 md:w-1/4 block relative md:inline-block text-left mb-1 p-2 md:m-2 ">
-        <span className="inline-block mr-2">
-          <label
+      <div className="block self-start md:inline-block text-left mb-2 p-2 m-2 ">
+        <span className="inline-block  p-1 w-[100px]">
+          <span
             className=" block text-xs opacity-60 font-thin mb-1"
             htmlFor="dateSelect"
           >
             GUESTS
-          </label>
-          <span className="block font-semibold">
+          </span>
+          <span className=" font-semibold">
             {guests !== 0
               ? `${guests > 1 ? `${guests} guests` : `${guests} guest`}`
               : "Add guests"}
           </span>
         </span>
-        <div className="absolute left-12 top-5 translate-x-16 rounded-3xl shadow-lg  outline outline-offset-1 outline-gray-300/10">
+        <div className="inline-block  md:w-auto rounded-3xl shadow-lg  outline outline-offset-1 outline-gray-300/10">
           <button
             className="p-2 inline-block"
             onClick={() => setGuests((prev) => prev - 1)}
@@ -101,11 +101,11 @@ export default function BookingTab() {
           </button>
         </div>
       </div>
-      <button className="w-10/12 block md:inline-block md:w-1/4 search-button md:mx-4">
-        <span className="inline-block">
+      <button className="block self-center w-[80%] md:w-[100px] md:inline-block search-button md:mx-4">
+        <span className="inline-flex items-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6 inline-block mr-2"
+            className="h-4 w-4  inline-block mr-2"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"

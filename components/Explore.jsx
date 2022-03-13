@@ -64,9 +64,9 @@ const sliderContent = [
 export default function Explore() {
   const swiperRef = useRef(null);
   return (
-    <section className="flex flex-col relative mx-10 my-8 sm:mx-20 xl:mx-72">
+    <section className="block mx-8 xl:mx-44">
       <BookingTab />
-      <div className="my-7 container">
+      <div className="my-7 container block">
         <h1 className="text-3xl font-bold mb-4">Explore</h1>
         <span className="flex justify-between">
           <h4>
@@ -115,7 +115,7 @@ export default function Explore() {
           </div>
         </span>
       </div>
-      <div className=" ">
+      <div className="block ">
         <SliderBasic sliderContent={sliderContent} swiperRef={swiperRef} />
       </div>
     </section>

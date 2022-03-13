@@ -15,6 +15,7 @@ export default function DatePicker() {
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns}>
       <StaticDateRangePicker
+        className="flex flex-col md:block"
         displayStaticWrapperAs="desktop"
         value={value}
         onChange={(newValue) => {
