@@ -133,7 +133,7 @@ export default function Calender({ setIsCalenderVisible, setDisplayDate }) {
             <span>Clear</span>
           </button>
           <button
-            className="absolute bottom-4 right-2 bg-gray-500 rounded-lg  w-[100px] p-1 m-1"
+            className="absolute bottom-4 right-2 bg-gradient-to-r from-gradientA to-gradientB rounded-lg  w-[100px] p-1 m-1"
             onClick={applyDates}
           >
             <span>Apply</span>
