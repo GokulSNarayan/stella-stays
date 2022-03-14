@@ -94,14 +94,14 @@ export default function Footer() {
             <a href="javascript:void(0)" className="inline-block">
               <img
                 className="h-6 w-6 mx-2"
-                src="/images/linkedin-brands.svg"
+                src="images/linkedin-brands.svg"
                 alt="linkedin"
               />
             </a>
             <a href="javascript:void(0)" className="inline-block">
               <img
                 className="h-6 w-6 mx-2"
-                src="/images/facebook-f-brands.svg"
+                src="images/facebook-f-brands.svg"
                 alt="linkedin"
               />
             </a>
@@ -109,7 +109,7 @@ export default function Footer() {
               {" "}
               <img
                 className="h-6 w-6 mx-2"
-                src="/images/instagram-brands.svg"
+                src="images/instagram-brands.svg"
                 alt="linkedin"
               />
             </a>

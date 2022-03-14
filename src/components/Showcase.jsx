@@ -25,7 +25,7 @@ export default function Showcase() {
           <span className="flex items-center mb-4">
             <img
               className="h-8 w-8 mr-2"
-              src="/images/support.svg"
+              src="images/support.svg"
               alt="support"
             />
             <h3>Sagittis vitae et leo duis ut diam quam nulla.</h3>
@@ -33,7 +33,7 @@ export default function Showcase() {
           <span className="flex items-center mb-4">
             <img
               className="h-8 w-8 mr-2"
-              src="/images/mail-wifi.svg"
+              src="images/mail-wifi.svg"
               alt="mail"
             />
             <h3>
@@ -44,7 +44,7 @@ export default function Showcase() {
           <span className="flex items-center mb-4">
             <img
               className="h-8 w-8 mr-2"
-              src="/images/location.svg"
+              src="images/location.svg"
               alt="location"
             />
             <h3>
@@ -55,7 +55,7 @@ export default function Showcase() {
           <span className="flex items-center mb-4">
             <img
               className="h-8 w-8 mr-2"
-              src="/images/calender.svg"
+              src="images/calender.svg"
               alt="calender"
             />
             <h3>Elementum curabitur vitae nunc.</h3>
@@ -67,27 +67,27 @@ export default function Showcase() {
             <div className="flex">
               <img
                 className="h-8 w-8"
-                src="/images/star-solid.svg"
+                src="images/star-solid.svg"
                 alt="star image"
               />
               <img
                 className="h-8 w-8"
-                src="/images/star-solid.svg"
+                src="images/star-solid.svg"
                 alt="star image"
               />
               <img
                 className="h-8 w-8"
-                src="/images/star-solid.svg"
+                src="images/star-solid.svg"
                 alt="star image"
               />
               <img
                 className="h-8 w-8"
-                src="/images/star-solid.svg"
+                src="images/star-solid.svg"
                 alt="star image"
               />
               <img
                 className="h-8 w-8"
-                src="/images/star-solid.svg"
+                src="images/star-solid.svg"
                 alt="star image"
               />
             </div>
