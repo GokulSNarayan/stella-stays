@@ -44,8 +44,21 @@ export default function FlexiDatePicker({ setFlexiBookingDates }) {
     }
   };
 
+  const updateDateString = () => {
+    console.log("Flexi");
+    setFlexiBookingDates([
+      category,
+      "in",
+      ...selectedMonths.map((monthId) => months[monthId].substr(0, 3)),
+    ]);
+  };
+
   return (
-    <div className=" md:container min-h-fit mb-10 mx-2">
+    <div
+      className=" md:container min-h-fit mb-10 mx-2"
+      onBlur={updateDateString}
+      tabIndex={0}
+    >
       <div className="flex flex-col items-center justify-center">
         <div className="block my-4 mx-auto h-4 mb-4">
           Stay for a <span className="font-semibold">{` ${category}`}</span>

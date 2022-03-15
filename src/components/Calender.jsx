@@ -23,10 +23,9 @@ export default function Calender({ setIsCalenderVisible, setDisplayDate }) {
   const [calenderType, setCalenderType] = useState("basic");
   const [bookingDates, setBookingDates] = useState([null, null]);
   const [flexiBookingDates, setFlexiBookingDates] = useState([]);
-
   console.log(
-    "🚀 ~ file: Calender.jsx ~ line 8 ~ Calender ~ bookingDates",
-    bookingDates
+    "🚀 ~ file: Calender.jsx ~ line 26 ~ Calender ~ flexiBookingDates",
+    flexiBookingDates
   );
 
   const applyDates = () => {
@@ -45,6 +44,8 @@ export default function Calender({ setIsCalenderVisible, setDisplayDate }) {
         setDisplayDate(dateRangeString);
       }
     } else {
+      let dateString = flexiBookingDates.join(" ");
+      setDisplayDate(dateString);
     }
   };
 
