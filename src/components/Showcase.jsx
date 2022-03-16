@@ -61,9 +61,15 @@ export default function Showcase() {
             <h3>Elementum curabitur vitae nunc.</h3>
           </span>
         </div>
-        <div>
+        <div className="flex flex-col justify-center items-center md:items-start">
           <hr className="my-4 border-gray-300" />
-          <span>
+          <div className="flex justify-center items-center mx-2 w-3/4 md:hidden  mb-4">
+            <img
+              src="https://stellastays.com/static/media/app-showcase-mobile.ee115814.png"
+              alt="iphone mockup"
+            />
+          </div>
+          <span className="mb-4">
             <div className="flex">
               <img
                 className="h-8 w-8"
@@ -92,13 +98,14 @@ export default function Showcase() {
               />
             </div>
           </span>
-          <span className="flex h-24">
+
+          <span className="flex h-24 mx-2">
             <img
-              className="w-40 mr-2"
+              className="w-28 h-14 md:w-40 mr-2"
               src="https://stellastays.com/static/media/app_store.4b86dc08.svg"
             ></img>
             <img
-              className="w-40 "
+              className="w-28 h-14 md:w-40"
               src="https://stellastays.com/static/media/play_store.5ef45cd6.svg"
             ></img>
           </span>
