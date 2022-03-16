@@ -52,7 +52,7 @@ export default function Calender({ setIsCalenderVisible, setDisplayDate }) {
   return (
     <div className="container relative  flex flex-col items-center bg-white shadow-lg rounded-lg cursor-default divide-y-2 divide-y-reverse">
       <div
-        className="outline-1 absolute top-2 left-1/2 right-1/2 -translate-x-1/2 outline-gray-500 shadow-lg rounded-3xl  w-2/5 mb-2 flex justify-around items-center text-black"
+        className="outline-1 absolute top-2 left-1/2 right-1/2 -translate-x-1/2 outline-gray-500 shadow-lg rounded-3xl  w-3/5 md:w-2/5 mb-2 flex justify-around items-center text-black"
         onChange={(e) => setCalenderType(e.target.value)}
       >
         <div className="h-10 w-full inline-block p-1 hover:cursor-pointer ">
