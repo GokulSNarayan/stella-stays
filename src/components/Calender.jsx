@@ -47,6 +47,7 @@ export default function Calender({ setIsCalenderVisible, setDisplayDate }) {
       let dateString = flexiBookingDates.join(" ");
       setDisplayDate(dateString);
     }
+    setIsCalenderVisible(false);
   };
 
   return (
