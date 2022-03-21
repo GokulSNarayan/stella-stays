@@ -71,11 +71,12 @@ export default function BookingPage() {
             <div
               className={`${
                 isCalenderVisible ? "block" : "hidden"
-              } absolute -bottom-1 z-30 md:-bottom-4 -translate-x-6 md:-translate-x-1/4 w-max left-0 right-0 translate-y-full`}
+              } absolute top-1/3 z-10 -left-1/2 shadow-md`}
             >
               <Calender
                 setIsCalenderVisible={setIsCalenderVisible}
                 setDisplayDate={setDisplayDate}
+                calenderStyle="normal"
               />
             </div>
           </div>
