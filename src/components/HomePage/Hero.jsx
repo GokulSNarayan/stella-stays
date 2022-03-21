@@ -1,4 +1,4 @@
-import BookingTab from "./BookingTab";
+import BookingTab from "../BookingTab";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, EffectFade } from "swiper";
 

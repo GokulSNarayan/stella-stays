@@ -1,6 +1,6 @@
 import { useRef } from "react";
-import BookingTab from "./BookingTab";
-import SliderBasic from "./SliderBasic/SliderBasic";
+import BookingTab from "../BookingTab";
+import SliderBasic from "../SliderBasic/SliderBasic";
 
 const sliderContent = [
   {

@@ -1,4 +1,4 @@
-import Slider from "./Slider";
+import Slider from "../Slider";
 
 const sliderImages = [
   "https://stellastays.com/static/media/home.280c73ff.jpg",

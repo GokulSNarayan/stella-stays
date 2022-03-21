@@ -1,23 +1,17 @@
 import { useState } from "react";
 import "./App.css";
-
-import Hero from "./components/Hero";
+import { Routes, Route, Link } from "react-router-dom";
 import Layout from "./components/Layout";
-import Explore from "./components/Explore";
-import Showcase from "./components/Showcase";
-import Footer from "./components/Footer";
-import Gallery from "./components/Gallery";
+import Home from "./components/HomePage/Home";
+import BookingPage from "./components/BookingPage/BookingPage";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <Layout>
-      <Hero />
-      <Explore />
-      <Showcase />
-      <Gallery />
-      <Footer />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/book" element={<BookingPage />} />
+      </Routes>
     </Layout>
   );
 }

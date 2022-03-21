@@ -1,4 +1,5 @@
 import { useState, useRef } from "react";
+import Footer from "./Footer";
 import Logo from "./Logo";
 
 export default function Layout({ children }) {
@@ -144,6 +145,7 @@ export default function Layout({ children }) {
         </div>
       </nav>
       {children}
+      <Footer />
     </div>
   );
 }
