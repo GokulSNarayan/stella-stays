@@ -9,6 +9,8 @@ export default function Layout({ children, location }) {
   const [mobileMenu, setMobileMenu] = useState(false);
   const contactRef = useRef();
 
+  const isHomePage = () => location.pathname === "/stella-stays/";
+
   const handleScroll = () => {
     if (window.scrollY >= 300) settransparent(false);
     else settransparent(true);
@@ -21,7 +23,7 @@ export default function Layout({ children, location }) {
     <div className="bg-white min-h-screen block relative scroll-smooth">
       <nav
         className={`navbar ${
-          transparent && location.pathname === "/"
+          transparent && isHomePage()
             ? "bg-transparent text-white"
             : "shadow-md bg-white text-black"
         }`}
@@ -30,7 +32,7 @@ export default function Layout({ children, location }) {
           className="flex flex-col self-start ml-2 mt-1 p-2"
           to={"stella-stays/"}
         >
-          <Logo transparent={transparent && location.pathname === "/"} />
+          <Logo transparent={transparent && isHomePage()} />
         </Link>
         <div
           className={`${
@@ -66,9 +68,7 @@ export default function Layout({ children, location }) {
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className={`h-6 w-6 stroke-current ${
-                transparent && location.pathname === "/"
-                  ? "fill-white"
-                  : "fill-black"
+                transparent && isHomePage() ? "fill-white" : "fill-black"
               }`}
               fill="none"
               viewBox="0 0 24 24"
@@ -104,7 +104,7 @@ export default function Layout({ children, location }) {
         <div className="hidden mr-2 items-center font-semibold justify-around md:flex">
           <a
             className={`w-32 block md:inline-block md:m-1 md:p-2 text-center rounded-3xl hover:bg-black/10  ${
-              transparent && location.pathname === "/"
+              transparent && isHomePage()
                 ? "bg-transparent border"
                 : "bg-gradient-to-r from-gradientA to-gradientB text-white"
             }`}
@@ -134,7 +134,7 @@ export default function Layout({ children, location }) {
           <a className="block md:inline-block md:m-1" href="javascript:void(0)">
             <div
               className={`${
-                transparent && location.pathname === "/"
+                transparent && isHomePage()
                   ? "bg-white text-black"
                   : "bg-gradient-to-r from-gradientA to-gradientB text-white"
               } w-10  inline-block md:p-2 text-center rounded-full hover:bg-black/10`}
