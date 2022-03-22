@@ -29,14 +29,13 @@ export default function BookingPage() {
   return (
     <div className="container block mx-auto mt-20">
       {/* title */}
-      <div className="block">
-        <span>
-          <h4 className="text-base">
+      <div className="block mx-auto">
+        <span className="m-1 p-1">
+          <h4 className=" m-1 p-1 text-base">
             Frond O - Palm Jumeirah - Dubai - United Arab Emirates
           </h4>
-        </span>
-        <span>
-          <h1 className="text-3xl font-semibold">
+
+          <h1 className=" p-1 text-3xl font-semibold">
             Gorgeous 5 BDR Palm Villa | Beach | Private Pool
           </h1>
         </span>
@@ -50,9 +49,9 @@ export default function BookingPage() {
         />
       </div>
       {/* about  bookingWindow */}
-      <div className="p-2 m-2 relative flex">
+      <div className="p-2 m-2 relative flex justify-around">
         <MainDetails />
-        <div className="sticky flex flex-col outline outline-1 outline-gray-300 rounded-xl shadow-md w-1/4 justify-self-center self-start m-4 p-4 right-0 top-20 translate-x-1/2 ">
+        <div className="sticky flex flex-col outline outline-1 outline-gray-300 rounded-xl shadow-md w-1/4 justify-self-center self-start m-4 p-4 right-1/4 top-20 translate-x-1/4 ">
           <span className="mb-2">
             <p>from</p>
             <h3>AED 3,670 / night</h3>

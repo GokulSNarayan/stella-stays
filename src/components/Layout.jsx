@@ -101,7 +101,7 @@ export default function Layout({ children, location }) {
         <div className="hidden mr-2 items-center font-semibold justify-around md:flex">
           <a
             className={`w-32 block md:inline-block md:m-1 md:p-2 text-center rounded-3xl hover:bg-black/10  ${
-              transparent
+              transparent && location.pathname === "/"
                 ? "bg-transparent border"
                 : "bg-gradient-to-r from-gradientA to-gradientB text-white"
             }`}
@@ -115,6 +115,12 @@ export default function Layout({ children, location }) {
           >
             Contact
           </a>
+          <Link
+            className="block md:inline-block md:m-1 md:p-2 rounded-3xl hover:bg-black/10"
+            to={"/booking"}
+          >
+            Booking
+          </Link>
           <span className="block md:inline-block md:m-1 md:p-2 ">|</span>
           <a
             className="block md:inline-block md:m-1 md:p-2  rounded-3xl hover:bg-black/10"
@@ -125,7 +131,7 @@ export default function Layout({ children, location }) {
           <a className="block md:inline-block md:m-1" href="javascript:void(0)">
             <div
               className={`${
-                transparent
+                transparent && location.pathname === "/"
                   ? "bg-white text-black"
                   : "bg-gradient-to-r from-gradientA to-gradientB text-white"
               } w-10  inline-block md:p-2 text-center rounded-full hover:bg-black/10`}
