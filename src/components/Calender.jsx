@@ -3,6 +3,7 @@ import { getYear, getMonth, getDate } from "date-fns";
 import DatePicker from "./DatePicker";
 import FlexiDatePicker from "./FlexiDatePicker";
 import { parseISO } from "date-fns/esm";
+import DateRangePicker from "./DateRangePicker";
 
 const monthsTable = {
   0: "Jan",
