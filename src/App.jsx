@@ -1,13 +1,13 @@
-import { useState } from "react";
 import "./App.css";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Layout from "./components/Layout";
 import Home from "./components/HomePage/Home";
 import BookingPage from "./components/BookingPage/BookingPage";
 
 function App() {
+  const location = useLocation();
   return (
-    <Layout>
+    <Layout location={location}>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/book" element={<BookingPage />} />

@@ -1,7 +1,6 @@
 const options = ["Dubai", "Montreal", "Manama"];
 
 export default function DropDown({ changeCity, toggleMenu, selectedOption }) {
-  console.log("From Dropdown");
   return (
     <div className="container relative w-[50vw] md:w-full h-full flex flex-col  bg-white shadow-lg rounded-lg">
       <div className="block text-left">

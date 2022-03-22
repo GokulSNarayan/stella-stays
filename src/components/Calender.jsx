@@ -28,10 +28,7 @@ export default function Calender({
   const [calenderType, setCalenderType] = useState("basic");
   const [bookingDates, setBookingDates] = useState([null, null]);
   const [flexiBookingDates, setFlexiBookingDates] = useState([]);
-  console.log(
-    "🚀 ~ file: Calender.jsx ~ line 26 ~ Calender ~ flexiBookingDates",
-    flexiBookingDates
-  );
+  const [validation, setValidation] = useState(true);
 
   const applyDates = () => {
     let dateRangeString;
@@ -45,7 +42,7 @@ export default function Calender({
         setDisplayDate(dateRangeString);
       } else {
         let dateRangeString = `${startDate} ${monthsTable[startMonth]}-${endDate} ${monthsTable[endMonth]}`;
-        console.log("🚀 reduced date", dateRangeString);
+
         setDisplayDate(dateRangeString);
       }
     } else {
@@ -63,6 +60,7 @@ export default function Calender({
         <DatePicker
           bookingDates={bookingDates}
           setBookingDates={setBookingDates}
+          validation={validation}
         />
         <div className="flex items-center justify-between absolute bottom-4 w-full">
           <button
@@ -74,6 +72,17 @@ export default function Calender({
           >
             <span>Clear</span>
           </button>
+          <div className="absolute left-1/4 flex items-center justify-between">
+            <label className="mr-2" htmlFor="validation">
+              Validation
+            </label>
+            <input
+              id="validation"
+              type="checkbox"
+              checked={validation}
+              onChange={() => setValidation((prev) => !prev)}
+            />
+          </div>
           <button
             className="relative translate-x-1/4 left-1/4 "
             onClick={() => setIsCalenderVisible(false)}

@@ -13,6 +13,5 @@ export default defineConfig({
   alias: {
     react: 'preact/compat',
   },
-
   publicDir: 'public'
 })

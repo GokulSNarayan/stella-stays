@@ -1,12 +1,14 @@
 import { useState, useRef } from "react";
+import { Link } from "react-router-dom";
 import Footer from "./Footer";
 import Logo from "./Logo";
 
-export default function Layout({ children }) {
+export default function Layout({ children, location }) {
   const [transparent, settransparent] = useState(true);
   const [showSearchBar, setShowSearchBar] = useState(false);
   const [mobileMenu, setMobileMenu] = useState(false);
   const contactRef = useRef();
+
   const handleScroll = () => {
     if (window.scrollY >= 300) settransparent(false);
     else settransparent(true);
@@ -19,14 +21,14 @@ export default function Layout({ children }) {
     <div className="bg-white min-h-screen block relative scroll-smooth">
       <nav
         className={`navbar ${
-          transparent
+          transparent && location.pathname === "/"
             ? "bg-transparent text-white"
             : "shadow-md bg-white text-black"
         }`}
       >
-        <div className="flex flex-col self-start ml-2 mt-1 p-2">
-          <Logo transparent={transparent} />
-        </div>
+        <Link className="flex flex-col self-start ml-2 mt-1 p-2" to={"/"}>
+          <Logo transparent={transparent && location.pathname === "/"} />
+        </Link>
         <div
           className={`${
             showSearchBar ? "hidden md:flex" : "hidden"
@@ -61,7 +63,9 @@ export default function Layout({ children }) {
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className={`h-6 w-6 stroke-current ${
-                transparent ? "fill-white" : "fill-black"
+                transparent && location.pathname === "/"
+                  ? "fill-white"
+                  : "fill-black"
               }`}
               fill="none"
               viewBox="0 0 24 24"

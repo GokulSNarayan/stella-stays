@@ -45,7 +45,6 @@ export default function FlexiDatePicker({ setFlexiBookingDates }) {
   };
 
   const updateDateString = () => {
-    console.log("Flexi");
     setFlexiBookingDates([
       category,
       "in",
