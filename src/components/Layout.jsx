@@ -26,7 +26,10 @@ export default function Layout({ children, location }) {
             : "shadow-md bg-white text-black"
         }`}
       >
-        <Link className="flex flex-col self-start ml-2 mt-1 p-2" to={"/"}>
+        <Link
+          className="flex flex-col self-start ml-2 mt-1 p-2"
+          to={"stella-stays/"}
+        >
           <Logo transparent={transparent && location.pathname === "/"} />
         </Link>
         <div
@@ -117,7 +120,7 @@ export default function Layout({ children, location }) {
           </a>
           <Link
             className="block md:inline-block md:m-1 md:p-2 rounded-3xl hover:bg-black/10"
-            to={"/booking"}
+            to={"stella-stays/booking"}
           >
             Booking
           </Link>

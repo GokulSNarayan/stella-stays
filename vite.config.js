@@ -13,5 +13,6 @@ export default defineConfig({
   alias: {
     react: 'preact/compat',
   },
+  base: '/stella-stays',
   publicDir: 'public'
 })

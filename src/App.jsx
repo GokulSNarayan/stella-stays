@@ -9,8 +9,8 @@ function App() {
   return (
     <Layout location={location}>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/booking" element={<BookingPage />} />
+        <Route path="stella-stays/" element={<Home />} />
+        <Route path="stella-stays/booking" element={<BookingPage />} />
       </Routes>
     </Layout>
   );
