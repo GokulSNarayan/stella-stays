@@ -1,13 +1,15 @@
+import { useAtom } from "jotai";
 import { useState } from "react";
+import { locationAtom, displayDateAtom, guestNumAtom } from "../store";
 import Calender from "./Calender";
 import DropDown from "./DropDown";
 
 export default function BookingTab() {
-  const [location, setLocation] = useState("");
+  const [location, setLocation] = useAtom(locationAtom);
   const [isCalenderVisible, setIsCalenderVisible] = useState(false);
   const [isDropDownVisible, setIsDropDownVisible] = useState(false);
-  const [displayDate, setDisplayDate] = useState(null);
-  const [guests, setGuests] = useState(0);
+  const [displayDate, setDisplayDate] = useAtom(displayDateAtom);
+  const [guests, setGuests] = useAtom(guestNumAtom);
   return (
     <div className=" mx-auto w-full xl:w-3/4 relative z-20 -top-12 shadow-xl flex items-center flex-col md:flex-row justify-around min-w-5xl bg-white p-2 rounded-3xl  ">
       <div className="relative w-4/5 md:w-1/4 self-start block md:inline-block text-left p-2 m-2 border border-white hover:border-b-black">

@@ -1,9 +1,9 @@
-import { useRef, useState, createContext } from "react";
-import { getYear, getMonth, getDate } from "date-fns";
+import { useState, createContext } from "react";
+import { getMonth, getDate } from "date-fns";
+import { useAtom } from "jotai";
+import { bookingRangeAtom } from "../store";
 import DatePicker from "./DatePicker";
 import FlexiDatePicker from "./FlexiDatePicker";
-import { parseISO } from "date-fns/esm";
-import DateRangePicker from "./DateRangePicker";
 
 const DateRangeContext = createContext({});
 const monthsTable = {
@@ -27,10 +27,9 @@ export default function Calender({
   calenderStyle,
 }) {
   const [calenderType, setCalenderType] = useState("basic");
-  const [bookingDates, setBookingDates] = useState([null, null]);
+  const [bookingDates, setBookingDates] = useAtom(bookingRangeAtom);
   const [flexiBookingDates, setFlexiBookingDates] = useState([]);
   const [validation, setValidation] = useState(true);
-  const clearRef = useRef();
 
   const applyDates = () => {
     let dateRangeString;
@@ -60,17 +59,11 @@ export default function Calender({
     return (
       <div className="relative">
         <DateRangeContext.Provider value={{ bookingDates, setBookingDates }}>
-          <DatePicker
-            bookingDates={bookingDates}
-            setBookingDates={setBookingDates}
-            validation={validation}
-            clearRef={clearRef}
-          />
+          <DatePicker validation={validation} />
         </DateRangeContext.Provider>
         <div className="flex items-center justify-between absolute bottom-4 w-full">
           <button
             className="relative w-[100px] p-1 m-1"
-            ref={clearRef}
             onClick={() => {
               setDisplayDate(null);
               setBookingDates([null, null]);
@@ -171,10 +164,7 @@ export default function Calender({
           <div className="block">
             {calenderType === "basic" ? (
               <div className="mx-2 ">
-                <DatePicker
-                  bookingDates={bookingDates}
-                  setBookingDates={setBookingDates}
-                />
+                <DatePicker />
               </div>
             ) : (
               <div className="mx-2">

@@ -4,7 +4,9 @@ import StaticDateRangePicker from "@mui/lab/StaticDateRangePicker";
 import AdapterDateFns from "@mui/lab/AdapterDateFns";
 import LocalizationProvider from "@mui/lab/LocalizationProvider";
 import Box from "@mui/material/Box";
-import { addDays, getDate, getMonth } from "date-fns";
+import { addDays } from "date-fns";
+import { useAtom } from "jotai";
+import { bookingRangeAtom } from "../store";
 // import { dataAPI } from "../api/dataApi";
 
 const bookingsDates = [
@@ -30,16 +32,11 @@ const datesToExclude = [
   "2022,4,25",
 ];
 
-export default function DatePicker({
-  bookingDates,
-  setBookingDates,
-  validation,
-  clearRef,
-}) {
+export default function DatePicker({ validation }) {
   const [unavailableDates, setUnavailableDates] = useState([]);
   const [bookAbleDates, setBookAbleDates] = useState([]);
   const [viewMode, setViewMode] = useState("desktop");
-  const [dateRange, setDateRange] = useState([null, null]);
+  const [dateRange, setDateRange] = useAtom(bookingRangeAtom);
 
   function getMinLOS(date) {
     let dateObj = bookAbleDates.find(
@@ -67,7 +64,7 @@ export default function DatePicker({
       : undefined;
   }
 
-  clearRef.current.onClick = () => setDateRange([null, null]);
+  // clearRef.current.onClick = () => setDateRange([null, null]);
   // useEffect(() => {}, [clearRef]);
 
   useEffect(() => {

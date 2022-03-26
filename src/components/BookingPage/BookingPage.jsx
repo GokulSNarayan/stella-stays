@@ -1,4 +1,6 @@
+import { useAtom } from "jotai";
 import { useRef, useState } from "react";
+import { actualGuestsNumAtom } from "../../store";
 import Calender from "../Calender";
 import SliderBasic from "../SliderBasic/SliderBasic";
 import MainDetails from "./MainDetails";
@@ -25,7 +27,7 @@ export default function BookingPage() {
   const swiperRef = useRef();
   const [displayDate, setDisplayDate] = useState(null);
   const [isCalenderVisible, setIsCalenderVisible] = useState(false);
-  const [guests, setGuests] = useState(0);
+  const [guests, setGuests] = useAtom(actualGuestsNumAtom);
   return (
     <div className="container block mx-auto mt-20">
       {/* title */}
