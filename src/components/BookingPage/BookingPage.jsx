@@ -31,7 +31,7 @@ export default function BookingPage() {
   const [guests, setGuests] = useAtom(actualGuestsNumAtom);
 
   useEffect(() => {
-    console.log("BookingPage");
+    window.scrollTo(0, 0);
     setBookingDates([null, null]);
   }, []);
   return (

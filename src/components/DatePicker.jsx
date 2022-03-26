@@ -22,6 +22,14 @@ const bookingsDates = [
     date: "2022,4,18",
     los: 3,
   },
+  {
+    date: "2022,5,3",
+    los: 4,
+  },
+  {
+    date: "2022,5,16",
+    los: 3,
+  },
 ];
 
 const datesToExclude = [
@@ -30,6 +38,8 @@ const datesToExclude = [
   "2022,4,10",
   "2022,4,16",
   "2022,4,25",
+  "2022,5,9",
+  "2022,5,22",
 ];
 
 export default function DatePicker({ validation }) {
