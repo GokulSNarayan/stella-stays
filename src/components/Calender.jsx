@@ -33,7 +33,7 @@ export default function Calender({
 
   const applyDates = () => {
     let dateRangeString;
-    if (calenderType === "basic") {
+    if (calenderType === "basic" && bookingDates[0] !== null) {
       const startDate = getDate(bookingDates[0]);
       const endDate = getDate(bookingDates[1]);
       const startMonth = getMonth(bookingDates[0]);
@@ -46,9 +46,11 @@ export default function Calender({
 
         setDisplayDate(dateRangeString);
       }
-    } else {
+    } else if (flexiBookingDates.length !== 0) {
       let dateString = flexiBookingDates.join(" ");
       setDisplayDate(dateString);
+    } else {
+      return;
     }
     setIsCalenderVisible(false);
   };
