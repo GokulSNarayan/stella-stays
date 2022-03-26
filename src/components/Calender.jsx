@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useRef, useState, createContext } from "react";
 import { getYear, getMonth, getDate } from "date-fns";
 import DatePicker from "./DatePicker";
 import FlexiDatePicker from "./FlexiDatePicker";
 import { parseISO } from "date-fns/esm";
 import DateRangePicker from "./DateRangePicker";
 
+const DateRangeContext = createContext({});
 const monthsTable = {
   0: "Jan",
   1: "Feb",
@@ -29,6 +30,7 @@ export default function Calender({
   const [bookingDates, setBookingDates] = useState([null, null]);
   const [flexiBookingDates, setFlexiBookingDates] = useState([]);
   const [validation, setValidation] = useState(true);
+  const clearRef = useRef();
 
   const applyDates = () => {
     let dateRangeString;
@@ -57,14 +59,18 @@ export default function Calender({
   if (calenderStyle && calenderStyle === "normal") {
     return (
       <div className="relative">
-        <DatePicker
-          bookingDates={bookingDates}
-          setBookingDates={setBookingDates}
-          validation={validation}
-        />
+        <DateRangeContext.Provider value={{ bookingDates, setBookingDates }}>
+          <DatePicker
+            bookingDates={bookingDates}
+            setBookingDates={setBookingDates}
+            validation={validation}
+            clearRef={clearRef}
+          />
+        </DateRangeContext.Provider>
         <div className="flex items-center justify-between absolute bottom-4 w-full">
           <button
             className="relative w-[100px] p-1 m-1"
+            ref={clearRef}
             onClick={() => {
               setDisplayDate(null);
               setBookingDates([null, null]);

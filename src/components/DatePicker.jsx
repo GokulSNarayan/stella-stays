@@ -5,13 +5,7 @@ import AdapterDateFns from "@mui/lab/AdapterDateFns";
 import LocalizationProvider from "@mui/lab/LocalizationProvider";
 import Box from "@mui/material/Box";
 import { addDays, getDate, getMonth } from "date-fns";
-import { dataAPI } from "../api/dataApi";
-// import { isSameDate } from "../utils/DateMatch";
-
-// let urls = ["/api/v1/bookableDates", "/api/v1/excludeDates"];
-// let apiPromises = urls.map((url) =>
-//   axios.get(url).then((response) => response.json())
-// );
+// import { dataAPI } from "../api/dataApi";
 
 const bookingsDates = [
   {
@@ -28,32 +22,53 @@ const bookingsDates = [
   },
 ];
 
-const datesToExclude = ["2022,3,28", "2022,4,5", "2022,4,10", "2022,4,25"];
+const datesToExclude = [
+  "2022,3,28",
+  "2022,4,5",
+  "2022,4,10",
+  "2022,4,16",
+  "2022,4,25",
+];
 
 export default function DatePicker({
   bookingDates,
   setBookingDates,
   validation,
+  clearRef,
 }) {
   const [unavailableDates, setUnavailableDates] = useState([]);
   const [bookAbleDates, setBookAbleDates] = useState([]);
   const [viewMode, setViewMode] = useState("desktop");
+  const [dateRange, setDateRange] = useState([null, null]);
 
   function getMinLOS(date) {
-    // if(bookAbleDates)
-    return date ? addDays(date, amount) : undefined;
+    let dateObj = bookAbleDates.find(
+      (item) =>
+        new Date(item.date).toDateString() === new Date(date).toDateString()
+    );
+    return dateObj
+      ? addDays(dateObj?.date, dateObj.los)
+      : addDays(new Date(date), 2);
   }
 
   function disableSpecificDates(date) {
-    let currentDate = getDate(date);
-    let currentMonth = getMonth(date);
-
     return unavailableDates.some(
       (currentItem) =>
-        currentItem.getDate() === currentDate &&
-        currentItem.getMonth() === currentMonth
+        new Date(currentItem).toDateString() === new Date(date).toDateString()
     );
   }
+
+  function getMaxDate(date) {
+    let firstBiggerDateIdx = unavailableDates.findIndex(
+      (item) => new Date(item).getTime() > new Date(date).getTime()
+    );
+    return firstBiggerDateIdx !== -1 && date !== null
+      ? new Date(unavailableDates[firstBiggerDateIdx])
+      : undefined;
+  }
+
+  clearRef.current.onClick = () => setDateRange([null, null]);
+  // useEffect(() => {}, [clearRef]);
 
   useEffect(() => {
     if (window.innerWidth < 768) {
@@ -90,14 +105,14 @@ export default function DatePicker({
         <StaticDateRangePicker
           disablePast
           reduceAnimations
-          className="flex flex-col md:block"
           displayStaticWrapperAs={viewMode}
-          minDate={getMinLOS}
+          minDate={getMinLOS(dateRange[0])}
+          maxDate={getMaxDate(dateRange[0])}
           shouldDisableDate={disableSpecificDates}
-          value={bookingDates}
+          value={dateRange}
           open={true}
           onChange={(newValue) => {
-            setBookingDates(newValue);
+            setDateRange(newValue);
           }}
           renderInput={(startProps, endProps) => (
             <Fragment>
@@ -117,10 +132,10 @@ export default function DatePicker({
           reduceAnimations
           className="flex flex-col md:block"
           displayStaticWrapperAs={viewMode}
-          value={bookingDates}
+          value={dateRange}
           open={true}
           onChange={(newValue) => {
-            setBookingDates(newValue);
+            setDateRange(newValue);
           }}
           renderInput={(startProps, endProps) => (
             <Fragment>
