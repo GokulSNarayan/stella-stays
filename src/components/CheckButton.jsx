@@ -5,7 +5,7 @@ export default function CheckButton({
   listOfMonths,
 }) {
   return (
-    <div className="h-10 w-full p-1 hover:cursor-pointer relative">
+    <div className="h-10 w-full p-1 relative">
       <input
         className="hidden peer"
         name="selectedMonths"
@@ -15,7 +15,7 @@ export default function CheckButton({
         onChange={handleCheck}
         checked={selectedMonths.indexOf(monthId) !== -1}
       />
-      <label htmlFor={monthId} className="checkButton">
+      <label htmlFor={monthId} className="checkButton cursor-pointer">
         <span>{listOfMonths[monthId]}</span>
       </label>
       <span className="absolute top-0 right-0 z-10 hidden peer-checked:block rounded-full bg-gradient-to-r from-gradientA to-gradientB">

@@ -117,7 +117,7 @@ export default function Calender({
             />
             <label
               htmlFor="basic"
-              className=" h-full w-full p-2 rounded-3xl flex justify-center items-center transition-colors bg-white peer-checked:bg-gradient-to-r from-gradientA to-gradientB"
+              className=" h-full w-full p-2 rounded-3xl cursor-pointer flex justify-center items-center transition-colors bg-white peer-checked:bg-gradient-to-r from-gradientA to-gradientB"
             >
               <span>Calender</span>
             </label>
@@ -132,7 +132,7 @@ export default function Calender({
             />
             <label
               htmlFor="flexible"
-              className="h-full w-full p-2 rounded-3xl flex justify-center items-center transition-colors bg-white peer-checked:bg-gradient-to-r from-gradientA to-gradientB "
+              className="h-full w-full p-2 rounded-3xl cursor-pointer flex justify-center items-center transition-colors bg-white peer-checked:bg-gradient-to-r from-gradientA to-gradientB "
             >
               <span>Flexible</span>
             </label>

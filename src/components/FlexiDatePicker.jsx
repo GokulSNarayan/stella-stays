@@ -81,7 +81,7 @@ export default function FlexiDatePicker({ setFlexiBookingDates }) {
               />
               <label
                 htmlFor={category}
-                className=" h-full w-full p-2 rounded-3xl flex justify-center items-center transition-colors bg-white peer-checked:bg-gradient-to-r from-gradientA to-gradientB"
+                className=" h-full w-full p-2 rounded-3xl cursor-pointer flex justify-center items-center transition-colors bg-white peer-checked:bg-gradient-to-r from-gradientA to-gradientB"
               >
                 <span>{category}</span>
               </label>

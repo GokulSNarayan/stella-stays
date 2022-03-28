@@ -8,7 +8,7 @@ export default function DropDown({ changeCity, toggleMenu, selectedOption }) {
           <button
             className={`${
               selectedOption === option ? "bg-blue-400" : ""
-            } w-full m-1 p-2 block text-lg font-medium rounded-md hover:bg-blue-100`}
+            } w-full m-1 p-2 block text-left text-lg font-medium rounded-md hover:bg-blue-100`}
             key={idx}
             onFocus={() => {
               changeCity(option);
