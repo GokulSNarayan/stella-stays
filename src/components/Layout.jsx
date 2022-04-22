@@ -1,15 +1,36 @@
-import { useState, useRef } from "react";
+import { useAtom } from "jotai";
+import { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { transparentHeader } from "../store";
+
 import Footer from "./Footer";
 import Logo from "./Logo";
 
 export default function Layout({ children, location }) {
-  const [transparent, settransparent] = useState(true);
+  const [transparent, settransparent] = useAtom(transparentHeader);
   const [showSearchBar, setShowSearchBar] = useState(false);
   const [mobileMenu, setMobileMenu] = useState(false);
-  const contactRef = useRef();
 
   const isHomePage = () => location.pathname === "/stella-stays/";
+
+  const sectionOptions = {
+    root: document.querySelector("#root"),
+    rootMargin: "0px",
+    threshold: 1.0,
+  };
+  console.log("Transparent in header", transparent);
+
+  useEffect(() => {
+    // const sectionObserver = new IntersectionObserver(
+    //   (entries, sectionObserver) => {
+    //     entries.forEach((entry) => console.log(entry));
+    //   },
+    //   sectionOptions
+    // );
+    // sectionObserver.observe(document.querySelector("#explore"));
+    // window.addEventListener("scroll", handleScroll);
+    // return () => window.removeEventListener("scroll");
+  }, [transparent]);
 
   const handleScroll = () => {
     if (window.scrollY >= 300) settransparent(false);
@@ -18,7 +39,7 @@ export default function Layout({ children, location }) {
     if (window.scrollY >= 800) setShowSearchBar(true);
     else setShowSearchBar(false);
   };
-  window.addEventListener("scroll", handleScroll);
+
   return (
     <div className="bg-white min-h-screen block relative scroll-smooth">
       <nav

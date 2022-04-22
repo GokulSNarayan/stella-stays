@@ -63,8 +63,9 @@ const sliderContent = [
 
 export default function Explore() {
   const swiperRef = useRef(null);
+
   return (
-    <section className="block mx-8 xl:mx-44">
+    <section id="explore" className="block mx-8 xl:mx-44">
       <BookingTab />
       <div className="my-7 container block">
         <h1 className="text-3xl font-bold mb-4">Explore</h1>

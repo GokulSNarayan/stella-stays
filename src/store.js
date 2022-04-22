@@ -6,3 +6,4 @@ export const displayDateAtom = atom(null);
 export const guestNumAtom = atom(0);
 //booking page
 export const actualGuestsNumAtom = atom(0);
+export const transparentHeader = atom(true);

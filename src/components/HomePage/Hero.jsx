@@ -7,6 +7,10 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css/effect-fade";
+import { useAtom } from "jotai";
+import { transparentHeader } from "../../store";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
 
 const sliderImages = [
   "https://stellastays.com/static/media/w2560-mtl-stj-53.33e0c4d3.webp",
@@ -17,8 +21,23 @@ const sliderImages = [
 ];
 
 export default function Hero() {
+  const [, settransparent] = useAtom(transparentHeader);
+  const { ref, inView, entry } = useInView({
+    threshold: 0.2,
+    trackVisibility: true,
+    delay: 100,
+  });
+  console.log("Hero is in view:", inView);
+
+  if (!inView) {
+    settransparent(false);
+  } else {
+    settransparent(true);
+    // console.log("setTransparent", transparent);
+  }
+
   return (
-    <section className="bg-white block -mt-48">
+    <section ref={ref} id="hero" className="bg-white block -mt-48">
       <div className="bg-contain relative md:bg-cover  opacity-90 ">
         <Swiper
           spaceBetween={30}
