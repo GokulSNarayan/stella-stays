@@ -6,11 +6,6 @@ import jotaiReactRefresh from 'jotai/babel/plugin-react-refresh';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  esbuild: {
-    jsxFactory: 'h',
-    jsxFragment: 'Fragment',
-    jsxInject: `import { h, Fragment } from 'preact'`,
-  },
   plugins: [react({ babel: { plugins: [jotaiDebugLabel, jotaiReactRefresh] } }),
   ],
   alias: {

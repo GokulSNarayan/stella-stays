@@ -13,11 +13,11 @@ export default function Home(props) {
     setBookingDates([null, null]);
   }, []);
   return (
-    <>
+    <div>
       <Hero />
       <Explore />
       <Showcase />
       <Gallery />
-    </>
+    </div>
   );
 }
