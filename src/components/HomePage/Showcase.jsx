@@ -1,10 +1,10 @@
 import Slider from "../Slider";
 
 const sliderImages = [
-  "/mobileImages/image1.jpg",
-  "/mobileImages/image2.jpg",
-  "/mobileImages/image3.jpg",
-  "/mobileImages/image4.jpg",
+  "images/mobileImages/image1.jpg",
+  "images/mobileImages/image2.jpg",
+  "images/mobileImages/image3.jpg",
+  "images/mobileImages/image4.jpg",
 ];
 export default function Showcase() {
   return (
@@ -65,7 +65,7 @@ export default function Showcase() {
           <hr className="my-4 border-gray-300" />
           <div className="flex justify-center items-center mx-2 w-3/4 md:hidden  mb-4">
             <img
-              src="/app-showcase-mobile.ee115814.png"
+              src="images/app-showcase-mobile.ee115814.png"
               alt="iphone mockup"
             />
           </div>
@@ -115,7 +115,7 @@ export default function Showcase() {
       <div className="hidden w-[20%] md:inline-block relative -bottom-24">
         <div className="absolute z-10 inline-block">
           <img
-            src="/iphone2.png"
+            src="images/iphone2.png"
             alt="iphone mockup"
           />
         </div>

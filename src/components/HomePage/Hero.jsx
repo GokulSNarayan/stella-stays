@@ -10,14 +10,14 @@ import "swiper/css/effect-fade";
 import { useAtom } from "jotai";
 import { transparentHeader } from "../../store";
 import { useInView } from "react-intersection-observer";
-import { useEffect } from "react";
+
 
 const sliderImages = [
-  "/slider/image1.webp",
-  "/slider/image2.webp",
-  "/slider/image3.webp",
-  "/slider/image4.webp",
-  "/slider/image5.webp",
+  "images/slider/image1.webp",
+  "images/slider/image2.webp",
+  "images/slider/image3.webp",
+  "images/slider/image4.webp",
+  "images/slider/image5.webp",
 ];
 
 export default function Hero() {
