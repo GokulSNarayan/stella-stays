@@ -13,11 +13,11 @@ import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 
 const sliderImages = [
-  "https://stellastays.com/static/media/w2560-mtl-stj-53.33e0c4d3.webp",
-  "https://stellastays.com/static/media/w2560-dxb-mt-362.e40e7739.webp",
-  "https://stellastays.com/static/media/w2560-mtl-stj-23.d31309b6.webp",
-  "https://stellastays.com/static/media/w2560-dxb-sparkle-2803.ea944445.webp",
-  "https://stellastays.com/static/media/w2560-dxb-palm-c67.b86299e1.webp",
+  "/slider/image1.webp",
+  "/slider/image2.webp",
+  "/slider/image3.webp",
+  "/slider/image4.webp",
+  "/slider/image5.webp",
 ];
 
 export default function Hero() {
