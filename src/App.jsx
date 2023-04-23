@@ -1,8 +1,9 @@
+import { Suspense, lazy } from "react";
 import "./App.css";
 import { Routes, Route, useLocation } from "react-router-dom";
 import Layout from "./components/Layout";
-import Home from "./components/HomePage/Home";
-import BookingPage from "./components/BookingPage/BookingPage";
+const Home = lazy(() => import("./components/HomePage/Home"));
+const BookingPage = lazy(() => import("./components/BookingPage/BookingPage"));
 import { atom, Provider } from "jotai";
 
 export const location = atom("");
@@ -19,10 +20,12 @@ function App() {
   return (
     <Layout location={location}>
       <Provider>
-        <Routes>
-          <Route path="stella-stays/" element={<Home />} />
-          <Route path="stella-stays/booking" element={<BookingPage />} />
-        </Routes>
+        <Suspense fallback={<h1>Loading....</h1>}>
+          <Routes>
+            <Route path="stella-stays/" element={<Home />} />
+            <Route path="stella-stays/booking" element={<BookingPage />} />
+          </Routes>
+        </Suspense>
       </Provider>
     </Layout>
   );
