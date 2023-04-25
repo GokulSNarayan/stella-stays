@@ -48,6 +48,7 @@ export default function DatePicker({ validation }) {
   const [viewMode, setViewMode] = useState("desktop");
   const [dateRange, setDateRange] = useAtom(bookingRangeAtom);
 
+  
   function getMinLOS(date) {
     let dateObj = bookAbleDates.find(
       (item) =>

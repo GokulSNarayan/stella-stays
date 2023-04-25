@@ -71,7 +71,6 @@ export default function Hero() {
           A new way to stay in your favorite neighbourhoods around the world.
         </h4>
       </span>
-      {/* <BookingTab /> */}
     </section>
   );
 }

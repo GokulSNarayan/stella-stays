@@ -26,7 +26,7 @@ export default function Calender({
   setDisplayDate,
   calenderStyle,
 }) {
-  const [calenderType, setCalenderType] = useState("basic");
+  const [calenderType, setCalenderType] = useState("flexible");
   const [bookingDates, setBookingDates] = useAtom(bookingRangeAtom);
   const [flexiBookingDates, setFlexiBookingDates] = useState([]);
   const [validation, setValidation] = useState(true);
@@ -91,7 +91,7 @@ export default function Calender({
             Close
           </button>
           <button
-            className="relative justify-self-end   bg-gradient-to-r from-gradientA to-gradientB rounded-lg  w-[100px] p-1 mr-4"
+            className="relative justify-self-end  bg-gradient-to-r from-gradientA to-gradientB rounded-lg  w-[100px] p-1 mr-4"
             onClick={applyDates}
           >
             <span>Apply</span>
@@ -101,27 +101,11 @@ export default function Calender({
     );
   } else {
     return (
-      <div className="container relative  flex flex-col items-center bg-white shadow-lg rounded-lg cursor-default divide-y-2 divide-y-reverse">
+      <div className="container relative min-w-[40vw]  flex flex-col items-center bg-white shadow-lg rounded-lg cursor-default divide-y-2 divide-y-reverse">
         <div
           className="outline-1 absolute top-2 left-1/2 right-1/2 -translate-x-1/2 outline-gray-500 shadow-lg rounded-3xl  w-3/5 md:w-2/5 mb-2 flex justify-around items-center text-black"
           onChange={(e) => setCalenderType(e.target.value)}
         >
-          <div className="h-10 w-full inline-block p-1 hover:cursor-pointer ">
-            <input
-              className="hidden peer"
-              name="calender"
-              type="radio"
-              id="basic"
-              value="basic"
-              defaultChecked
-            />
-            <label
-              htmlFor="basic"
-              className=" h-full w-full p-2 rounded-3xl cursor-pointer flex justify-center items-center transition-colors bg-white peer-checked:bg-gradient-to-r from-gradientA to-gradientB"
-            >
-              <span>Calender</span>
-            </label>
-          </div>
           <div className="h-10 w-full inline-block p-1 hover:cursor-pointer">
             <input
               className="hidden peer"
@@ -129,6 +113,7 @@ export default function Calender({
               type="radio"
               id="flexible"
               value="flexible"
+              checked={calenderType === "flexible"}
             />
             <label
               htmlFor="flexible"
@@ -137,10 +122,27 @@ export default function Calender({
               <span>Flexible</span>
             </label>
           </div>
+          <div className="h-10 w-full inline-block p-1 hover:cursor-pointer ">
+            <input
+              className="hidden peer"
+              name="calender"
+              type="radio"
+              id="basic"
+              value="basic"
+              checked={calenderType === "basic"}
+            />
+            <label
+              htmlFor="basic"
+              className=" h-full w-full p-2 rounded-3xl cursor-pointer flex justify-center items-center transition-colors bg-white peer-checked:bg-gradient-to-r from-gradientA to-gradientB"
+            >
+              <span>Calender</span>
+            </label>
+          </div>
         </div>
 
         <button
           className="absolute top-4 right-2 flex items-center justify-center bg-transparent"
+          style={{borderBottomWidth:0}}
           onClick={() => setIsCalenderVisible(false)}
         >
           <svg
@@ -166,7 +168,7 @@ export default function Calender({
           <div className="block">
             {calenderType === "basic" ? (
               <div className="mx-2 ">
-                <DatePicker />
+                <DatePicker validation={false}/>
               </div>
             ) : (
               <div className="mx-2">
